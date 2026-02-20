@@ -57,21 +57,56 @@ function initNavbar() {
   // Hamburger
   const hamburger = navbar.querySelector('.nav-hamburger');
   const mobileMenu = navbar.querySelector('.nav-mobile');
+  const mobileLayananToggle = navbar.querySelector('.mobile-layanan-toggle');
+  const mobileLayananSub = navbar.querySelector('.mobile-layanan-sub');
+
+  function setMenuState(open) {
+    if (!hamburger || !mobileMenu) return;
+    hamburger.classList.toggle('open', open);
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (window.innerWidth <= 900) {
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+  }
+
   if (hamburger && mobileMenu) {
+    hamburger.setAttribute('aria-expanded', 'false');
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
+      const willOpen = !mobileMenu.classList.contains('open');
+      setMenuState(willOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.classList.contains('open')) return;
+      if (!navbar.contains(e.target)) {
+        setMenuState(false);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setMenuState(false);
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        setMenuState(false);
+      }
     });
   }
 
   // Mobile sub-menu toggles
-  const mobileLayananToggle = navbar.querySelector('.mobile-layanan-toggle');
-  const mobileLayananSub = navbar.querySelector('.mobile-layanan-sub');
   if (mobileLayananToggle && mobileLayananSub) {
+    mobileLayananToggle.setAttribute('aria-expanded', 'false');
+    mobileLayananSub.style.display = 'none';
     mobileLayananToggle.addEventListener('click', (e) => {
       e.preventDefault();
       const isOpen = mobileLayananSub.style.display === 'flex';
       mobileLayananSub.style.display = isOpen ? 'none' : 'flex';
+      mobileLayananToggle.classList.toggle('open', !isOpen);
+      mobileLayananToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     });
   }
 
@@ -106,8 +141,7 @@ function initNavbar() {
 
         // Close mobile menu if open
         if (hamburger && mobileMenu) {
-          hamburger.classList.remove('open');
-          mobileMenu.classList.remove('open');
+          setMenuState(false);
         }
       }
     });
