@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Company Profile PT Mulya Nusantara Sakti – izinajadulu.com & Doctor.TAX. Konsultan perizinan, legalitas, dan pajak terpercaya di Tangerang." />
-    <meta name="keywords" content="company profile izinajadulu, PT Mulya Nusantara Sakti, konsultan pajak tangerang, virtual office tangerang" />
+    <meta name="description"
+        content="Company Profile PT Mulya Nusantara Sakti – izinajadulu.com & Doctor.TAX. Konsultan perizinan, legalitas, dan pajak terpercaya di Tangerang." />
+    <meta name="keywords"
+        content="company profile izinajadulu, PT Mulya Nusantara Sakti, konsultan pajak tangerang, virtual office tangerang" />
     <title>Company Profile – PT Mulya Nusantara Sakti | Izinajadulu</title>
     <link rel="stylesheet" href="/css/style.css" />
     <style>
@@ -23,24 +25,48 @@
             position: relative;
             overflow: hidden;
         }
+
         .cp-hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background-image:
-                linear-gradient(rgba(27,95,186,.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(27,95,186,.05) 1px, transparent 1px);
+                linear-gradient(rgba(27, 95, 186, .05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(27, 95, 186, .05) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
-        .cp-hero-shapes { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+
+        .cp-hero-shapes {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
         .cp-shape {
             position: absolute;
             border-radius: 50%;
             filter: blur(90px);
         }
-        .cp-shape-1 { width: 700px; height: 700px; background: #7dc4f5; opacity: .2; top: -200px; right: -150px; }
-        .cp-shape-2 { width: 400px; height: 400px; background: #0ba4c4; opacity: .1; bottom: -100px; left: 5%; }
+
+        .cp-shape-1 {
+            width: 700px;
+            height: 700px;
+            background: #7dc4f5;
+            opacity: .2;
+            top: -200px;
+            right: -150px;
+        }
+
+        .cp-shape-2 {
+            width: 400px;
+            height: 400px;
+            background: #0ba4c4;
+            opacity: .1;
+            bottom: -100px;
+            left: 5%;
+        }
 
         .cp-hero-inner {
             position: relative;
@@ -56,8 +82,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(11,164,196,.1);
-            border: 1px solid rgba(11,164,196,.25);
+            background: rgba(11, 164, 196, .1);
+            border: 1px solid rgba(11, 164, 196, .25);
             color: #0ba4c4;
             font-size: .78rem;
             font-weight: 700;
@@ -67,8 +93,10 @@
             border-radius: 100px;
             margin-bottom: 24px;
         }
+
         .cp-hero-tag-dot {
-            width: 6px; height: 6px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: #0ba4c4;
             animation: pulse 2s infinite;
@@ -83,7 +111,10 @@
             letter-spacing: -.03em;
             margin-bottom: 12px;
         }
-        .cp-hero-title .accent { color: #1b5fba; }
+
+        .cp-hero-title .accent {
+            color: #1b5fba;
+        }
 
         .cp-hero-company {
             font-size: 1rem;
@@ -113,15 +144,22 @@
             gap: 0;
             margin-top: 52px;
             padding-top: 36px;
-            border-top: 1px solid rgba(27,95,186,.15);
+            border-top: 1px solid rgba(27, 95, 186, .15);
         }
+
         .cp-hero-stat {
             flex: 1;
             padding-right: 32px;
-            border-right: 1px solid rgba(27,95,186,.15);
+            border-right: 1px solid rgba(27, 95, 186, .15);
             margin-right: 32px;
         }
-        .cp-hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+
+        .cp-hero-stat:last-child {
+            border-right: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+
         .cp-hero-stat-num {
             font-family: var(--font-display);
             font-size: 2.2rem;
@@ -130,8 +168,17 @@
             line-height: 1;
             margin-bottom: 4px;
         }
-        .cp-hero-stat-num span { color: #1b5fba; }
-        .cp-hero-stat-label { font-size: .78rem; color: #4a7fa8; text-transform: uppercase; letter-spacing: .05em; }
+
+        .cp-hero-stat-num span {
+            color: #1b5fba;
+        }
+
+        .cp-hero-stat-label {
+            font-size: .78rem;
+            color: #4a7fa8;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
 
         /* Director Card */
         .director-card {
@@ -141,15 +188,19 @@
             padding: 40px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(27,95,186,.12);
+            box-shadow: 0 8px 32px rgba(27, 95, 186, .12);
         }
+
         .director-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 3px;
             background: linear-gradient(90deg, #1b5fba, #0ba4c4);
         }
+
         .director-avatar {
             width: 100px;
             height: 100px;
@@ -163,8 +214,9 @@
             font-weight: 900;
             color: white;
             margin-bottom: 20px;
-            border: 3px solid rgba(11,164,196,.3);
+            border: 3px solid rgba(11, 164, 196, .3);
         }
+
         .director-name {
             font-family: var(--font-display);
             font-size: 1.4rem;
@@ -172,6 +224,7 @@
             color: #0d2045;
             margin-bottom: 4px;
         }
+
         .director-title {
             font-size: .82rem;
             color: #0ba4c4;
@@ -180,6 +233,7 @@
             text-transform: uppercase;
             margin-bottom: 20px;
         }
+
         .director-quote {
             font-size: .9rem;
             color: #4a7fa8;
@@ -188,12 +242,82 @@
             border-left: 2px solid #0ba4c4;
             padding-left: 16px;
         }
+
         .director-brand-tags {
             display: flex;
             gap: 10px;
             margin-top: 24px;
             flex-wrap: wrap;
         }
+
+        /* Container Foto agar all-size & responsive */
+        .director-image-wrapper {
+            width: 120px;
+            /* Ukuran default desktop */
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            /* Memastikan foto tetap bulat */
+            border: 4px solid rgba(11, 164, 196, 0.2);
+            background: #f0f7ff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .director-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* KUNCI: Foto otomatis terpotong rapi tanpa distorsi */
+            object-position: center;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Fallback jika gambar error/tidak ada */
+        .director-avatar-fallback {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
+            color: white;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            z-index: 1;
+        }
+
+        /* Penyesuaian Responsif untuk Mobile */
+        @media (max-width: 640px) {
+            .director-image-wrapper {
+                width: 100px;
+                /* Sedikit mengecil di mobile */
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                /* Foto ke tengah jika di mobile */
+            }
+
+            .director-card {
+                text-align: center;
+                /* Teks ke tengah agar simetris di mobile */
+                padding: 30px 20px;
+            }
+
+            .director-quote {
+                text-align: left;
+                /* Kutipan tetap rata kiri agar mudah dibaca */
+            }
+
+            .director-brand-tags {
+                justify-content: center;
+            }
+        }
+
         .brand-tag {
             padding: 6px 14px;
             border-radius: 100px;
@@ -201,8 +325,18 @@
             font-weight: 700;
             letter-spacing: .05em;
         }
-        .brand-tag-blue { background: rgba(27,95,186,.08); color: #1b5fba; border: 1px solid rgba(27,95,186,.2); }
-        .brand-tag-accent { background: rgba(11,164,196,.08); color: #0ba4c4; border: 1px solid rgba(11,164,196,.25); }
+
+        .brand-tag-blue {
+            background: rgba(27, 95, 186, .08);
+            color: #1b5fba;
+            border: 1px solid rgba(27, 95, 186, .2);
+        }
+
+        .brand-tag-accent {
+            background: rgba(11, 164, 196, .08);
+            color: #0ba4c4;
+            border: 1px solid rgba(11, 164, 196, .25);
+        }
 
         /* ── Breadcrumb ── */
         .breadcrumb {
@@ -213,13 +347,28 @@
             color: #4a7fa8;
             margin-bottom: 24px;
         }
-        .breadcrumb a { color: #1b5fba; transition: color .2s; }
-        .breadcrumb a:hover { color: #0ba4c4; }
-        .breadcrumb-sep { color: #7bafd4; }
-        .breadcrumb-current { color: #0ba4c4; }
+
+        .breadcrumb a {
+            color: #1b5fba;
+            transition: color .2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #0ba4c4;
+        }
+
+        .breadcrumb-sep {
+            color: #7bafd4;
+        }
+
+        .breadcrumb-current {
+            color: #0ba4c4;
+        }
 
         /* ── Vision Mission ── */
-        #cp-visi-misi { background: #f0f7ff; }
+        #cp-visi-misi {
+            background: #f0f7ff;
+        }
 
         .vm-grid {
             display: grid;
@@ -237,25 +386,49 @@
             overflow: hidden;
             transition: all .3s var(--ease);
         }
-        .vm-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); }
+
+        .vm-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(27, 95, 186, .13);
+        }
+
         .vm-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 4px;
         }
-        .vm-card.visi::before { background: linear-gradient(90deg, #1b5fba, #3b9ee8); }
-        .vm-card.misi::before { background: linear-gradient(90deg, #3b9ee8, #0ba4c4); }
+
+        .vm-card.visi::before {
+            background: linear-gradient(90deg, #1b5fba, #3b9ee8);
+        }
+
+        .vm-card.misi::before {
+            background: linear-gradient(90deg, #3b9ee8, #0ba4c4);
+        }
 
         .vm-icon {
-            width: 56px; height: 56px;
+            width: 56px;
+            height: 56px;
             border-radius: var(--radius-md);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 24px;
             font-size: 1.5rem;
         }
-        .vm-icon.blue { background: rgba(27,95,186,.1); color: #1b5fba; }
-        .vm-icon.sky { background: rgba(11,164,196,.1); color: #0ba4c4; }
+
+        .vm-icon.blue {
+            background: rgba(27, 95, 186, .1);
+            color: #1b5fba;
+        }
+
+        .vm-icon.sky {
+            background: rgba(11, 164, 196, .1);
+            color: #0ba4c4;
+        }
 
         .vm-label {
             font-size: .75rem;
@@ -265,6 +438,7 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
+
         .vm-title {
             font-family: var(--font-display);
             font-size: 1.6rem;
@@ -272,6 +446,7 @@
             color: #0d2045;
             margin-bottom: 16px;
         }
+
         .vm-text {
             font-size: .95rem;
             color: #4a7fa8;
@@ -284,22 +459,28 @@
             gap: 16px;
             margin-top: 4px;
         }
+
         .misi-item {
             display: flex;
             align-items: flex-start;
             gap: 14px;
         }
+
         .misi-num {
-            width: 28px; height: 28px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
             color: white;
             font-size: .78rem;
             font-weight: 800;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-shrink: 0;
             margin-top: 1px;
         }
+
         .misi-item p {
             font-size: .9rem;
             color: #4a7fa8;
@@ -312,6 +493,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
+
         .nilai-card {
             background: #ffffff;
             border-radius: var(--radius-md);
@@ -320,21 +502,32 @@
             text-align: center;
             transition: all .3s var(--ease);
         }
-        .nilai-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); border-color: rgba(27,95,186,.25); }
+
+        .nilai-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(27, 95, 186, .13);
+            border-color: rgba(27, 95, 186, .25);
+        }
+
         .nilai-icon {
-            width: 52px; height: 52px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto 16px;
             font-size: 1.4rem;
         }
+
         .nilai-title {
             font-size: .95rem;
             font-weight: 700;
             color: #0d2045;
             margin-bottom: 8px;
         }
+
         .nilai-desc {
             font-size: .8rem;
             color: #4a7fa8;
@@ -342,13 +535,16 @@
         }
 
         /* ── Services ── */
-        #cp-layanan { background: #ffffff; }
+        #cp-layanan {
+            background: #ffffff;
+        }
 
         .cp-services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
+
         .cp-service-card {
             background: #f0f7ff;
             border: 1px solid #d6e8f8;
@@ -358,40 +554,65 @@
             position: relative;
             overflow: hidden;
         }
+
         .cp-service-card::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 3px;
             background: linear-gradient(90deg, #1b5fba, #3b9ee8);
             transform: scaleX(0);
             transition: transform .3s var(--ease);
             transform-origin: left;
         }
+
         .cp-service-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 8px 32px rgba(27,95,186,.13);
-            border-color: rgba(27,95,186,.25);
+            box-shadow: 0 8px 32px rgba(27, 95, 186, .13);
+            border-color: rgba(27, 95, 186, .25);
         }
-        .cp-service-card:hover::after { transform: scaleX(1); }
+
+        .cp-service-card:hover::after {
+            transform: scaleX(1);
+        }
+
         .cp-service-card.highlight {
             background: linear-gradient(135deg, #1b5fba 0%, #3b9ee8 100%);
             border-color: transparent;
         }
-        .cp-service-card.highlight .cp-svc-title { color: white; }
-        .cp-service-card.highlight .cp-svc-desc { color: rgba(255,255,255,.8); }
-        .cp-service-card.highlight .cp-svc-icon { background: rgba(255,255,255,.15); color: white; }
-        .cp-service-card.highlight::after { background: linear-gradient(90deg, #0ba4c4, #7dc4f5); }
+
+        .cp-service-card.highlight .cp-svc-title {
+            color: white;
+        }
+
+        .cp-service-card.highlight .cp-svc-desc {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .cp-service-card.highlight .cp-svc-icon {
+            background: rgba(255, 255, 255, .15);
+            color: white;
+        }
+
+        .cp-service-card.highlight::after {
+            background: linear-gradient(90deg, #0ba4c4, #7dc4f5);
+        }
 
         .cp-svc-icon {
-            width: 52px; height: 52px;
+            width: 52px;
+            height: 52px;
             border-radius: var(--radius-md);
-            background: rgba(27,95,186,.1);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(27, 95, 186, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #1b5fba;
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
+
         .cp-svc-title {
             font-family: var(--font-display);
             font-size: 1.05rem;
@@ -399,6 +620,7 @@
             color: #0d2045;
             margin-bottom: 10px;
         }
+
         .cp-svc-desc {
             font-size: .85rem;
             color: #4a7fa8;
@@ -411,12 +633,14 @@
             overflow: hidden;
             position: relative;
         }
+
         #cp-harga::before {
             content: '';
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             background-image:
-                linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
@@ -430,27 +654,50 @@
         }
 
         .pricing-card {
-            background: rgba(255,255,255,.1);
-            border: 1px solid rgba(255,255,255,.2);
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
             border-radius: var(--radius-lg);
             padding: 40px 32px;
             position: relative;
             transition: all .3s var(--ease);
         }
-        .pricing-card:hover { transform: translateY(-6px); background: rgba(255,255,255,.15); }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, .15);
+        }
+
         .pricing-card.popular {
             background: #ffffff;
             border-color: transparent;
             transform: scale(1.04);
-            box-shadow: 0 24px 60px rgba(0,0,0,.2);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, .2);
         }
-        .pricing-card.popular:hover { transform: scale(1.04) translateY(-6px); }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.04) translateY(-6px);
+        }
+
         .pricing-card.popular .pricing-name,
-        .pricing-card.popular .pricing-price { color: #0d2045; }
-        .pricing-card.popular .pricing-tier { color: #1b5fba; }
-        .pricing-card.popular .pricing-period { color: #4a7fa8; }
-        .pricing-card.popular .pricing-feature { color: #0d2045; }
-        .pricing-card.popular .pricing-feature-check { background: rgba(27,95,186,.12); }
+        .pricing-card.popular .pricing-price {
+            color: #0d2045;
+        }
+
+        .pricing-card.popular .pricing-tier {
+            color: #1b5fba;
+        }
+
+        .pricing-card.popular .pricing-period {
+            color: #4a7fa8;
+        }
+
+        .pricing-card.popular .pricing-feature {
+            color: #0d2045;
+        }
+
+        .pricing-card.popular .pricing-feature-check {
+            background: rgba(27, 95, 186, .12);
+        }
 
         .pricing-popular-badge {
             position: absolute;
@@ -471,7 +718,7 @@
         .pricing-tier {
             font-size: .72rem;
             font-weight: 700;
-            color: rgba(255,255,255,.8);
+            color: rgba(255, 255, 255, .8);
             letter-spacing: .12em;
             text-transform: uppercase;
             margin-bottom: 12px;
@@ -493,20 +740,26 @@
             line-height: 1;
             margin-bottom: 4px;
         }
-        .pricing-card.popular .pricing-price { color: #1b5fba; }
+
+        .pricing-card.popular .pricing-price {
+            color: #1b5fba;
+        }
 
         .pricing-period {
             font-size: .78rem;
-            color: rgba(255,255,255,.6);
+            color: rgba(255, 255, 255, .6);
             margin-bottom: 28px;
         }
 
         .pricing-divider {
             border: none;
-            border-top: 1px solid rgba(255,255,255,.2);
+            border-top: 1px solid rgba(255, 255, 255, .2);
             margin-bottom: 24px;
         }
-        .pricing-card.popular .pricing-divider { border-color: #d6e8f8; }
+
+        .pricing-card.popular .pricing-divider {
+            border-color: #d6e8f8;
+        }
 
         .pricing-features {
             display: flex;
@@ -514,19 +767,24 @@
             gap: 12px;
             margin-bottom: 32px;
         }
+
         .pricing-feature {
             display: flex;
             align-items: flex-start;
             gap: 10px;
             font-size: .85rem;
-            color: rgba(255,255,255,.85);
+            color: rgba(255, 255, 255, .85);
             line-height: 1.5;
         }
+
         .pricing-feature-check {
-            width: 18px; height: 18px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
-            background: rgba(255,255,255,.2);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(255, 255, 255, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-shrink: 0;
             margin-top: 1px;
         }
@@ -545,27 +803,40 @@
             cursor: pointer;
             text-decoration: none;
         }
+
         .btn-pricing-outline {
             background: transparent;
-            border: 1.5px solid rgba(255,255,255,.4);
+            border: 1.5px solid rgba(255, 255, 255, .4);
             color: white;
         }
-        .btn-pricing-outline:hover { background: rgba(255,255,255,.15); border-color: white; }
+
+        .btn-pricing-outline:hover {
+            background: rgba(255, 255, 255, .15);
+            border-color: white;
+        }
+
         .btn-pricing-solid {
             background: linear-gradient(135deg, #1b5fba, #3b9ee8);
             color: white;
             border: none;
         }
-        .btn-pricing-solid:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,95,186,.3); }
+
+        .btn-pricing-solid:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(27, 95, 186, .3);
+        }
 
         /* ── Testimoni Asli ── */
-        #cp-testimoni { background: #f0f7ff; }
+        #cp-testimoni {
+            background: #f0f7ff;
+        }
 
         .cp-testi-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
+
         .cp-testi-card {
             background: #ffffff;
             border-radius: var(--radius-lg);
@@ -574,7 +845,13 @@
             transition: all .3s var(--ease);
             position: relative;
         }
-        .cp-testi-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); border-color: rgba(27,95,186,.2); }
+
+        .cp-testi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(27, 95, 186, .13);
+            border-color: rgba(27, 95, 186, .2);
+        }
+
         .cp-testi-quote-mark {
             font-family: var(--font-display);
             font-size: 4rem;
@@ -583,6 +860,7 @@
             opacity: .15;
             margin-bottom: 12px;
         }
+
         .cp-testi-text {
             font-size: .9rem;
             color: #4a7fa8;
@@ -590,8 +868,18 @@
             font-style: italic;
             margin-bottom: 24px;
         }
-        .cp-testi-stars { display: flex; gap: 3px; margin-bottom: 20px; }
-        .cp-testi-star { color: #f59e0b; font-size: .9rem; }
+
+        .cp-testi-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 20px;
+        }
+
+        .cp-testi-star {
+            color: #f59e0b;
+            font-size: .9rem;
+        }
+
         .cp-testi-author {
             display: flex;
             align-items: center;
@@ -599,18 +887,32 @@
             padding-top: 20px;
             border-top: 1px solid #d6e8f8;
         }
+
         .cp-testi-avatar {
-            width: 48px; height: 48px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: .9rem;
             font-weight: 800;
             color: white;
             flex-shrink: 0;
         }
-        .cp-testi-name { font-size: .9rem; font-weight: 700; color: #0d2045; }
-        .cp-testi-company { font-size: .78rem; color: #4a7fa8; margin-top: 2px; }
+
+        .cp-testi-name {
+            font-size: .9rem;
+            font-weight: 700;
+            color: #0d2045;
+        }
+
+        .cp-testi-company {
+            font-size: .78rem;
+            color: #4a7fa8;
+            margin-top: 2px;
+        }
 
         /* ── Contact CTA ── */
         #cp-contact {
@@ -619,23 +921,43 @@
             position: relative;
             overflow: hidden;
         }
+
         #cp-contact::before {
             content: '';
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             background-image:
-                linear-gradient(rgba(27,95,186,.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(27,95,186,.05) 1px, transparent 1px);
+                linear-gradient(rgba(27, 95, 186, .05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(27, 95, 186, .05) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
-        .cp-contact-shape-1, .cp-contact-shape-2 {
+
+        .cp-contact-shape-1,
+        .cp-contact-shape-2 {
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
             pointer-events: none;
         }
-        .cp-contact-shape-1 { width: 500px; height: 500px; background: #7dc4f5; opacity: .25; top: -150px; right: -100px; }
-        .cp-contact-shape-2 { width: 350px; height: 350px; background: #0ba4c4; opacity: .12; bottom: -100px; left: -50px; }
+
+        .cp-contact-shape-1 {
+            width: 500px;
+            height: 500px;
+            background: #7dc4f5;
+            opacity: .25;
+            top: -150px;
+            right: -100px;
+        }
+
+        .cp-contact-shape-2 {
+            width: 350px;
+            height: 350px;
+            background: #0ba4c4;
+            opacity: .12;
+            bottom: -100px;
+            left: -50px;
+        }
 
         .cp-contact-inner {
             position: relative;
@@ -654,7 +976,11 @@
             letter-spacing: -.03em;
             margin-bottom: 16px;
         }
-        .cp-contact-title span { color: #1b5fba; }
+
+        .cp-contact-title span {
+            color: #1b5fba;
+        }
+
         .cp-contact-desc {
             font-size: 1rem;
             color: #4a7fa8;
@@ -668,6 +994,7 @@
             gap: 16px;
             margin-bottom: 40px;
         }
+
         .cp-contact-card {
             background: #ffffff;
             border: 1px solid #d6e8f8;
@@ -677,17 +1004,28 @@
             transition: all .3s var(--ease);
             text-decoration: none;
             display: block;
-            box-shadow: 0 2px 12px rgba(27,95,186,.08);
+            box-shadow: 0 2px 12px rgba(27, 95, 186, .08);
         }
-        .cp-contact-card:hover { background: #f0f7ff; transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); border-color: rgba(27,95,186,.2); }
+
+        .cp-contact-card:hover {
+            background: #f0f7ff;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(27, 95, 186, .13);
+            border-color: rgba(27, 95, 186, .2);
+        }
+
         .cp-contact-card-icon {
-            width: 48px; height: 48px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-            background: rgba(27,95,186,.08);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(27, 95, 186, .08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto 14px;
             color: #1b5fba;
         }
+
         .cp-contact-card-label {
             font-size: .72rem;
             color: #4a7fa8;
@@ -695,6 +1033,7 @@
             letter-spacing: .08em;
             margin-bottom: 6px;
         }
+
         .cp-contact-card-value {
             font-size: .9rem;
             font-weight: 600;
@@ -712,42 +1051,102 @@
         /* Back to Top */
         #back-to-top {
             position: fixed;
-            bottom: 32px; left: 32px;
-            width: 44px; height: 44px;
+            bottom: 32px;
+            left: 32px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             background: #1b5fba;
-            border: 1px solid rgba(27,95,186,.3);
+            border: 1px solid rgba(27, 95, 186, .3);
             color: white;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             opacity: 0;
             pointer-events: none;
             transition: all .3s;
             z-index: 998;
-            box-shadow: 0 4px 16px rgba(27,95,186,.25);
+            box-shadow: 0 4px 16px rgba(27, 95, 186, .25);
         }
-        #back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+        #back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-            .pricing-card.popular { transform: none; }
-            .pricing-card.popular:hover { transform: translateY(-6px); }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .pricing-card.popular {
+                transform: none;
+            }
+
+            .pricing-card.popular:hover {
+                transform: translateY(-6px);
+            }
         }
+
         @media (max-width: 900px) {
-            .cp-hero-inner { grid-template-columns: 1fr; gap: 48px; }
-            .vm-grid { grid-template-columns: 1fr; }
-            .cp-services-grid { grid-template-columns: repeat(2, 1fr); }
-            .cp-testi-grid { grid-template-columns: 1fr; }
-            .cp-contact-cards { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto 40px; }
-            .nilai-grid { grid-template-columns: repeat(2, 1fr); }
+            .cp-hero-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .vm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cp-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cp-testi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cp-contact-cards {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin: 0 auto 40px;
+            }
+
+            .nilai-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
+
         @media (max-width: 640px) {
-            .cp-services-grid { grid-template-columns: 1fr; }
-            .nilai-grid { grid-template-columns: 1fr; }
-            .cp-hero-stats { flex-direction: column; gap: 24px; }
-            .cp-hero-stat { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid rgba(27,95,186,.15); padding-bottom: 24px; }
-            .cp-hero-stat:last-child { border-bottom: none; padding-bottom: 0; }
+            .cp-services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nilai-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cp-hero-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .cp-hero-stat {
+                border-right: none;
+                margin-right: 0;
+                padding-right: 0;
+                border-bottom: 1px solid rgba(27, 95, 186, .15);
+                padding-bottom: 24px;
+            }
+
+            .cp-hero-stat:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
         }
     </style>
 </head>
@@ -769,24 +1168,46 @@
                     <li><a href="../index.html#profil" class="nav-link">Profil</a></li>
                     <li class="nav-item">
                         <a href="../index.html#layanan" class="nav-link">Layanan
-                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" /></svg>
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
                         </a>
                         <div class="nav-dropdown">
                             <a href="virtual-office.html" class="dropdown-item">
-                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /></svg></div>
-                                <div class="dropdown-text"><span class="dropdown-label">Virtual Office</span><span class="dropdown-desc">Mulai Rp2.000.000/tahun</span></div>
+                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"
+                                        stroke="white" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                    </svg></div>
+                                <div class="dropdown-text"><span class="dropdown-label">Virtual Office</span><span
+                                        class="dropdown-desc">Mulai Rp2.000.000/tahun</span></div>
                             </a>
                             <a href="pendirian-pt.html" class="dropdown-item">
-                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                                <div class="dropdown-text"><span class="dropdown-label">Pendirian PT</span><span class="dropdown-desc">Mulai Rp4.999.000</span></div>
+                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"
+                                        stroke="white" stroke-width="2">
+                                        <path
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg></div>
+                                <div class="dropdown-text"><span class="dropdown-label">Pendirian PT</span><span
+                                        class="dropdown-desc">Mulai Rp4.999.000</span></div>
                             </a>
                             <a href="konsultasi-pajak.html" class="dropdown-item">
-                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg></div>
-                                <div class="dropdown-text"><span class="dropdown-label">Konsultasi Pajak</span><span class="dropdown-desc">Perusahaan & Pribadi</span></div>
+                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"
+                                        stroke="white" stroke-width="2">
+                                        <path
+                                            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg></div>
+                                <div class="dropdown-text"><span class="dropdown-label">Konsultasi Pajak</span><span
+                                        class="dropdown-desc">Perusahaan & Pribadi</span></div>
                             </a>
                             <a href="company-profile.html" class="dropdown-item">
-                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
-                                <div class="dropdown-text"><span class="dropdown-label">Company Profile</span><span class="dropdown-desc">PT Mulya Nusantara Sakti</span></div>
+                                <div class="dropdown-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"
+                                        stroke="white" stroke-width="2">
+                                        <path
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg></div>
+                                <div class="dropdown-text"><span class="dropdown-label">Company Profile</span><span
+                                        class="dropdown-desc">PT Mulya Nusantara Sakti</span></div>
                             </a>
                         </div>
                     </li>
@@ -795,7 +1216,8 @@
                 </ul>
                 <div class="nav-cta">
                     <a href="tel:02180630707" class="btn-nav-phone">(021) 8063-0707</a>
-                    <a href="https://wa.me/6283151165600?text=Halo+Izin+Aja+Dulu" target="_blank" rel="noopener" class="btn-nav-wa">Hubungi Kami</a>
+                    <a href="https://wa.me/6283151165600?text=Halo+Izin+Aja+Dulu" target="_blank" rel="noopener"
+                        class="btn-nav-wa">Hubungi Kami</a>
                 </div>
                 <button class="nav-hamburger" aria-label="Toggle menu">
                     <span class="hamburger-line"></span>
@@ -809,7 +1231,8 @@
                 <a href="virtual-office.html" class="mobile-nav-link">🏢 Virtual Office</a>
                 <a href="company-profile.html" class="mobile-nav-link">📄 Company Profile</a>
                 <div class="mobile-cta-group">
-                    <a href="https://wa.me/6283151165600" target="_blank" class="btn-primary" style="justify-content:center">WhatsApp Sekarang</a>
+                    <a href="https://wa.me/6283151165600" target="_blank" class="btn-primary"
+                        style="justify-content:center">WhatsApp Sekarang</a>
                 </div>
             </div>
         </div>
@@ -844,15 +1267,27 @@
                     </h1>
                     <p class="cp-hero-company">PT Mulya Nusantara Sakti</p>
                     <p class="cp-hero-desc">
-                        Perusahaan jasa konsultan perizinan, legalitas, dan perpajakan terpercaya. Didukung tim dengan pengalaman lebih dari 5 tahun, kami hadir untuk mempermudah proses legalitas bisnis Anda secara cepat, tepat, dan profesional.
+                        Perusahaan jasa konsultan perizinan, legalitas, dan perpajakan terpercaya. Didukung tim dengan
+                        pengalaman lebih dari 5 tahun, kami hadir untuk mempermudah proses legalitas bisnis Anda secara
+                        cepat, tepat, dan profesional.
                     </p>
                     <div class="cp-hero-cta">
-                        <a href="https://wa.me/6283151165600?text=Halo,%20saya%20ingin%20konsultasi%20gratis" target="_blank" rel="noopener" class="btn-primary">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.5 2C6.262 2 2 6.262 2 11.5c0 1.862.518 3.597 1.414 5.086L2 22l5.567-1.389A9.451 9.451 0 0011.5 21C16.738 21 21 16.738 21 11.5S16.738 2 11.5 2z"/></svg>
+                        <a href="https://wa.me/6283151165600?text=Halo,%20saya%20ingin%20konsultasi%20gratis"
+                            target="_blank" rel="noopener" class="btn-primary">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                <path
+                                    d="M11.5 2C6.262 2 2 6.262 2 11.5c0 1.862.518 3.597 1.414 5.086L2 22l5.567-1.389A9.451 9.451 0 0011.5 21C16.738 21 21 16.738 21 11.5S16.738 2 11.5 2z" />
+                            </svg>
                             Konsultasi Gratis
                         </a>
                         <a href="#cp-harga" class="btn-secondary">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"/></svg>
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
                             Lihat Paket Harga
                         </a>
                     </div>
@@ -873,13 +1308,18 @@
                     </div>
                 </div>
 
-                <!-- Right: Director Card -->
                 <div class="director-card reveal">
-                    <div class="director-avatar">MR</div>
+                    <div class="director-image-wrapper">
+                        <img src="/img/ceo.png" alt="Muh. Yose Rizaldy" class="director-img">
+                      
+                    </div>
+
                     <div class="director-name">Muh. Yose Rizaldy</div>
                     <div class="director-title">Direktur — PT Mulya Nusantara Sakti</div>
                     <p class="director-quote">
-                        "izinajadulu.com dan Doctor.TAX hadir untuk menjadi mitra terpercaya bagi para pelaku usaha dalam mengurus legalitas, perizinan, dan perpajakan — cepat, tepat, dan berorientasi service excellence."
+                        "izinajadulu.com dan Doctor.TAX hadir untuk menjadi mitra terpercaya bagi para pelaku usaha
+                        dalam mengurus legalitas, perizinan, dan perpajakan — cepat, tepat, dan berorientasi service
+                        excellence."
                     </p>
                     <div class="director-brand-tags">
                         <span class="brand-tag brand-tag-blue">🏠 izinajadulu.com</span>
@@ -898,29 +1338,37 @@
             <div class="section-header reveal">
                 <div class="section-tag">Identitas Perusahaan</div>
                 <h2 class="section-title">Visi & <span class="highlight">Misi Kami</span></h2>
-                <p class="section-subtitle">Landasan nilai dan arah gerak PT Mulya Nusantara Sakti dalam melayani klien.</p>
+                <p class="section-subtitle">Landasan nilai dan arah gerak PT Mulya Nusantara Sakti dalam melayani klien.
+                </p>
             </div>
 
             <div class="vm-grid">
                 <!-- Visi -->
                 <div class="vm-card visi reveal">
                     <div class="vm-icon blue">
-                        <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
                     </div>
                     <div class="vm-label">Visi</div>
                     <div class="vm-title">Service Excellence</div>
                     <p class="vm-text">
-                        Menjadi perusahaan jasa konsultan perizinan, legalitas, dan perpajakan yang <strong>handal</strong> yang berorientasi <em>service excellence</em> bagi para klien di seluruh Indonesia.
+                        Menjadi perusahaan jasa konsultan perizinan, legalitas, dan perpajakan yang
+                        <strong>handal</strong> yang berorientasi <em>service excellence</em> bagi para klien di seluruh
+                        Indonesia.
                     </p>
                 </div>
 
                 <!-- Misi -->
                 <div class="vm-card misi reveal reveal-delay-1">
                     <div class="vm-icon sky">
-                        <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                         </svg>
                     </div>
                     <div class="vm-label">Misi</div>
@@ -928,15 +1376,19 @@
                     <div class="misi-list">
                         <div class="misi-item">
                             <div class="misi-num">1</div>
-                            <p>Membangun kepercayaan klien dengan pendekatan <em>problem solving</em> yang tepat sasaran.</p>
+                            <p>Membangun kepercayaan klien dengan pendekatan <em>problem solving</em> yang tepat
+                                sasaran.</p>
                         </div>
                         <div class="misi-item">
                             <div class="misi-num">2</div>
-                            <p>Memberikan pendampingan dalam proses perizinan, legalitas, dan perpajakan yang <strong>cepat dan tepat</strong>.</p>
+                            <p>Memberikan pendampingan dalam proses perizinan, legalitas, dan perpajakan yang
+                                <strong>cepat dan tepat</strong>.
+                            </p>
                         </div>
                         <div class="misi-item">
                             <div class="misi-num">3</div>
-                            <p>Menjaga kesinambungan pelayanan antar <em>stakeholder</em> dengan menjunjung tinggi integritas.</p>
+                            <p>Menjaga kesinambungan pelayanan antar <em>stakeholder</em> dengan menjunjung tinggi
+                                integritas.</p>
                         </div>
                     </div>
                 </div>
@@ -950,17 +1402,20 @@
                 <div class="nilai-card reveal">
                     <div class="nilai-icon">🤝</div>
                     <div class="nilai-title">Kepercayaan</div>
-                    <p class="nilai-desc">Membangun hubungan jangka panjang berbasis kepercayaan dan transparansi dengan setiap klien.</p>
+                    <p class="nilai-desc">Membangun hubungan jangka panjang berbasis kepercayaan dan transparansi dengan
+                        setiap klien.</p>
                 </div>
                 <div class="nilai-card reveal reveal-delay-1">
                     <div class="nilai-icon">⚡</div>
                     <div class="nilai-title">Kecepatan</div>
-                    <p class="nilai-desc">Proses pengurusan dokumen yang efisien tanpa mengorbankan kualitas dan keakuratan.</p>
+                    <p class="nilai-desc">Proses pengurusan dokumen yang efisien tanpa mengorbankan kualitas dan
+                        keakuratan.</p>
                 </div>
                 <div class="nilai-card reveal reveal-delay-2">
                     <div class="nilai-icon">🎯</div>
                     <div class="nilai-title">Integritas</div>
-                    <p class="nilai-desc">Menjunjung tinggi etika profesional dalam setiap interaksi dengan klien dan mitra usaha.</p>
+                    <p class="nilai-desc">Menjunjung tinggi etika profesional dalam setiap interaksi dengan klien dan
+                        mitra usaha.</p>
                 </div>
             </div>
         </div>
@@ -974,39 +1429,46 @@
             <div class="section-header reveal">
                 <div class="section-tag">Our Services</div>
                 <h2 class="section-title">Layanan <span class="highlight">Lengkap Kami</span></h2>
-                <p class="section-subtitle">Rangkaian layanan profesional untuk mendukung pertumbuhan dan legalitas bisnis Anda.</p>
+                <p class="section-subtitle">Rangkaian layanan profesional untuk mendukung pertumbuhan dan legalitas
+                    bisnis Anda.</p>
             </div>
 
             <div class="cp-services-grid">
                 <div class="cp-service-card highlight reveal">
                     <div class="cp-svc-icon">🏢</div>
                     <div class="cp-svc-title">Virtual Office</div>
-                    <p class="cp-svc-desc">Layanan sewa-pinjam alamat kantor bergengsi di Scientia Square untuk keperluan surat-menyurat, domisili PT/CV, dan perizinan lanjutan.</p>
+                    <p class="cp-svc-desc">Layanan sewa-pinjam alamat kantor bergengsi di Scientia Square untuk
+                        keperluan surat-menyurat, domisili PT/CV, dan perizinan lanjutan.</p>
                 </div>
                 <div class="cp-service-card reveal reveal-delay-1">
                     <div class="cp-svc-icon">⚖️</div>
                     <div class="cp-svc-title">Legal – Izin – Pajak</div>
-                    <p class="cp-svc-desc">Konsultasi perizinan, legalitas, dan perpajakan bagi badan usaha maupun pribadi. Pendampingan penuh dari awal hingga dokumen terbit.</p>
+                    <p class="cp-svc-desc">Konsultasi perizinan, legalitas, dan perpajakan bagi badan usaha maupun
+                        pribadi. Pendampingan penuh dari awal hingga dokumen terbit.</p>
                 </div>
                 <div class="cp-service-card reveal reveal-delay-2">
                     <div class="cp-svc-icon">💼</div>
                     <div class="cp-svc-title">Co-Working Space</div>
-                    <p class="cp-svc-desc">Ruang kerja fleksibel dengan fasilitas lengkap di lokasi strategis Tangerang, ideal untuk freelancer, startup, dan tim kecil.</p>
+                    <p class="cp-svc-desc">Ruang kerja fleksibel dengan fasilitas lengkap di lokasi strategis Tangerang,
+                        ideal untuk freelancer, startup, dan tim kecil.</p>
                 </div>
                 <div class="cp-service-card reveal">
                     <div class="cp-svc-icon">📱</div>
                     <div class="cp-svc-title">Digital Marketing & SEO</div>
-                    <p class="cp-svc-desc">Strategi pemasaran digital yang terukur untuk meningkatkan visibilitas online bisnis Anda secara efektif dan efisien.</p>
+                    <p class="cp-svc-desc">Strategi pemasaran digital yang terukur untuk meningkatkan visibilitas online
+                        bisnis Anda secara efektif dan efisien.</p>
                 </div>
                 <div class="cp-service-card reveal reveal-delay-1">
                     <div class="cp-svc-icon">👥</div>
                     <div class="cp-svc-title">Human Resources Management</div>
-                    <p class="cp-svc-desc">Solusi manajemen sumber daya manusia yang komprehensif, dari rekrutmen hingga administrasi kepegawaian perusahaan Anda.</p>
+                    <p class="cp-svc-desc">Solusi manajemen sumber daya manusia yang komprehensif, dari rekrutmen hingga
+                        administrasi kepegawaian perusahaan Anda.</p>
                 </div>
                 <div class="cp-service-card reveal reveal-delay-2">
                     <div class="cp-svc-icon">🏛️</div>
                     <div class="cp-svc-title">Lawyer & Legal Assistance</div>
-                    <p class="cp-svc-desc">Bantuan hukum profesional dari tim lawyer berpengalaman untuk perlindungan dan kepastian hukum bisnis Anda.</p>
+                    <p class="cp-svc-desc">Bantuan hukum profesional dari tim lawyer berpengalaman untuk perlindungan
+                        dan kepastian hukum bisnis Anda.</p>
                 </div>
             </div>
         </div>
@@ -1018,9 +1480,13 @@
     <section id="cp-harga">
         <div class="container">
             <div class="section-header reveal" style="margin-bottom:64px">
-                <div class="section-tag" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:white">Virtual Office Option</div>
-                <h2 class="section-title" style="color:white">Paket <span style="color:#cce8ff">Virtual Office</span></h2>
-                <p class="section-subtitle" style="color:rgba(255,255,255,.75)">Tiga pilihan paket Virtual Office yang dapat disesuaikan dengan kebutuhan dan skala bisnis Anda.</p>
+                <div class="section-tag"
+                    style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:white">Virtual
+                    Office Option</div>
+                <h2 class="section-title" style="color:white">Paket <span style="color:#cce8ff">Virtual Office</span>
+                </h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,.75)">Tiga pilihan paket Virtual Office yang
+                    dapat disesuaikan dengan kebutuhan dan skala bisnis Anda.</p>
             </div>
 
             <div class="pricing-grid">
@@ -1034,24 +1500,34 @@
                     <div class="pricing-features">
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             Alamat surat-menyurat 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Ruang Meeting 12 jam/tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Resepsionis Profesional
                         </div>
                     </div>
-                    <a href="https://wa.me/6283151165600?text=Halo,%20saya%20tertarik%20paket%20Standard%20Virtual%20Office" target="_blank" rel="noopener" class="btn-pricing btn-pricing-outline">
+                    <a href="https://wa.me/6283151165600?text=Halo,%20saya%20tertarik%20paket%20Standard%20Virtual%20Office"
+                        target="_blank" rel="noopener" class="btn-pricing btn-pricing-outline">
                         Pilih Standard
                     </a>
                 </div>
@@ -1067,30 +1543,43 @@
                     <div class="pricing-features">
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             Alamat surat-menyurat 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Ruang Meeting 12 jam/tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             Domain + Alamat Website 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Desain Website Perusahaan 1 bulan
                         </div>
                     </div>
-                    <a href="https://wa.me/6283151165600?text=Halo,%20saya%20tertarik%20paket%20Premium%20Virtual%20Office" target="_blank" rel="noopener" class="btn-pricing btn-pricing-solid">
+                    <a href="https://wa.me/6283151165600?text=Halo,%20saya%20tertarik%20paket%20Premium%20Virtual%20Office"
+                        target="_blank" rel="noopener" class="btn-pricing btn-pricing-solid">
                         Pilih Premium
                     </a>
                 </div>
@@ -1105,36 +1594,52 @@
                     <div class="pricing-features">
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             Alamat surat-menyurat 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Ruang Meeting 12 jam/tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             Domain + Alamat Website 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Desain Website Perusahaan 1 bulan
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             FREE Akun Sosial Media IG/TikTok/Facebook
                         </div>
                     </div>
-                    <a href="https://wa.me/6283151165600?text=Halo,%20saya%20tertarik%20paket%20Enterprise%20Virtual%20Office" target="_blank" rel="noopener" class="btn-pricing btn-pricing-outline">
+                    <a href="https://wa.me/6283151165600?text=Halo,%20saya%20tertarik%20paket%20Enterprise%20Virtual%20Office"
+                        target="_blank" rel="noopener" class="btn-pricing btn-pricing-outline">
                         Pilih Enterprise
                     </a>
                 </div>
@@ -1150,7 +1655,8 @@
             <div class="section-header reveal">
                 <div class="section-tag">Client Testimonials</div>
                 <h2 class="section-title">Kata <span class="highlight">Klien Kami</span></h2>
-                <p class="section-subtitle">Testimoni nyata dari klien yang telah mempercayakan kebutuhan legalitas bisnis mereka kepada kami.</p>
+                <p class="section-subtitle">Testimoni nyata dari klien yang telah mempercayakan kebutuhan legalitas
+                    bisnis mereka kepada kami.</p>
             </div>
 
             <div class="cp-testi-grid">
@@ -1158,7 +1664,9 @@
                     <div class="cp-testi-quote-mark">"</div>
                     <p class="cp-testi-text">Proses pengurusan PT cepat serta pelayanannya baik juga ramah.</p>
                     <div class="cp-testi-stars">
-                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
+                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
                         <div class="cp-testi-avatar">MR</div>
@@ -1171,12 +1679,17 @@
 
                 <div class="cp-testi-card reveal reveal-delay-1">
                     <div class="cp-testi-quote-mark">"</div>
-                    <p class="cp-testi-text">Tidak lama untuk proses negosiasi dan mengambil keputusan untuk pembuatan PT di izinajadulu.com karena fast respon dan komunikatif dalam menjawab kebutuhan dan pertanyaan.</p>
+                    <p class="cp-testi-text">Tidak lama untuk proses negosiasi dan mengambil keputusan untuk pembuatan
+                        PT di izinajadulu.com karena fast respon dan komunikatif dalam menjawab kebutuhan dan
+                        pertanyaan.</p>
                     <div class="cp-testi-stars">
-                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
+                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
-                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#1b5fba,#3b9ee8);">MA</div>
+                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#1b5fba,#3b9ee8);">MA
+                        </div>
                         <div>
                             <div class="cp-testi-name">Muh. Aslim</div>
                             <div class="cp-testi-company">PT Digital Komunikasi Nusantara</div>
@@ -1186,12 +1699,16 @@
 
                 <div class="cp-testi-card reveal">
                     <div class="cp-testi-quote-mark">"</div>
-                    <p class="cp-testi-text">Pelayanan full services sampai untuk tanda tangan akta perusahaan tidak perlu repot ke kantor notaris dan sangat mengedukasi dalam proses pendirian PT kami.</p>
+                    <p class="cp-testi-text">Pelayanan full services sampai untuk tanda tangan akta perusahaan tidak
+                        perlu repot ke kantor notaris dan sangat mengedukasi dalam proses pendirian PT kami.</p>
                     <div class="cp-testi-stars">
-                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
+                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
-                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg, #3b9ee8, #0ba4c4);">IF</div>
+                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg, #3b9ee8, #0ba4c4);">IF
+                        </div>
                         <div>
                             <div class="cp-testi-name">Ina Fitriana Safira</div>
                             <div class="cp-testi-company">PT Almuna Multi Purpose</div>
@@ -1201,12 +1718,16 @@
 
                 <div class="cp-testi-card reveal reveal-delay-1">
                     <div class="cp-testi-quote-mark">"</div>
-                    <p class="cp-testi-text">Sangat membantu dalam proses pengurusan PKP perusahaan kami. Lokasi strategis dan prosesnya cepat dan mudah.</p>
+                    <p class="cp-testi-text">Sangat membantu dalam proses pengurusan PKP perusahaan kami. Lokasi
+                        strategis dan prosesnya cepat dan mudah.</p>
                     <div class="cp-testi-stars">
-                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
+                        <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span
+                            class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
-                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#2272d9,#7dc4f5);">JN</div>
+                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#2272d9,#7dc4f5);">JN
+                        </div>
                         <div>
                             <div class="cp-testi-name">Jat Nurdin</div>
                             <div class="cp-testi-company">PT Sakabumi Jaya Abadi</div>
@@ -1230,27 +1751,42 @@
                     Siap Memulai<br><span>Kerja Sama?</span>
                 </h2>
                 <p class="cp-contact-desc">
-                    Konsultasi gratis dengan tim ahli kami. Kami siap membantu Anda menemukan solusi terbaik untuk kebutuhan legalitas dan perpajakan bisnis Anda.
+                    Konsultasi gratis dengan tim ahli kami. Kami siap membantu Anda menemukan solusi terbaik untuk
+                    kebutuhan legalitas dan perpajakan bisnis Anda.
                 </p>
 
                 <div class="cp-contact-cards">
                     <a href="https://www.izinajadulu.com" target="_blank" rel="noopener" class="cp-contact-card">
                         <div class="cp-contact-card-icon">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                            </svg>
                         </div>
                         <div class="cp-contact-card-label">Website</div>
                         <div class="cp-contact-card-value">www.izinajadulu.com</div>
                     </a>
                     <a href="mailto:mulyanusantarasakti@gmail.com" class="cp-contact-card">
                         <div class="cp-contact-card-icon">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
                         </div>
                         <div class="cp-contact-card-label">Email</div>
                         <div class="cp-contact-card-value">mulyanusantarasakti<br>@gmail.com</div>
                     </a>
                     <a href="tel:02180630707" class="cp-contact-card">
                         <div class="cp-contact-card-icon">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" />
+                            </svg>
                         </div>
                         <div class="cp-contact-card-label">Telepon</div>
                         <div class="cp-contact-card-value">021-80630707</div>
@@ -1258,18 +1794,28 @@
                 </div>
 
                 <div class="cp-contact-actions">
-                    <a href="https://wa.me/6283151165600?text=Halo%20Izin%20Aja%20Dulu,%20saya%20ingin%20konsultasi%20gratis" target="_blank" rel="noopener" class="btn-cta-wa">
-                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.5 2C6.262 2 2 6.262 2 11.5c0 1.862.518 3.597 1.414 5.086L2 22l5.567-1.389A9.451 9.451 0 0011.5 21C16.738 21 21 16.738 21 11.5S16.738 2 11.5 2z"/></svg>
+                    <a href="https://wa.me/6283151165600?text=Halo%20Izin%20Aja%20Dulu,%20saya%20ingin%20konsultasi%20gratis"
+                        target="_blank" rel="noopener" class="btn-cta-wa">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M11.5 2C6.262 2 2 6.262 2 11.5c0 1.862.518 3.597 1.414 5.086L2 22l5.567-1.389A9.451 9.451 0 0011.5 21C16.738 21 21 16.738 21 11.5S16.738 2 11.5 2z" />
+                        </svg>
                         Chat WhatsApp Sekarang
                     </a>
                     <a href="../index.html#layanan" class="btn-cta-phone">
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
                         Lihat Semua Layanan
                     </a>
                 </div>
 
                 <p style="margin-top:24px; font-size:.78rem; color:#7bafd4; text-align:center;">
-                    Scientia Residence Tower C, Jl Scientia Square Utara, Curug Sangereng, Kelapa Dua, Kab. Tangerang 15810
+                    Scientia Residence Tower C, Jl Scientia Square Utara, Curug Sangereng, Kelapa Dua, Kab. Tangerang
+                    15810
                 </p>
             </div>
         </div>
@@ -1279,7 +1825,8 @@
     <footer id="footer">
         <div class="container">
             <div class="footer-bottom" style="padding:32px 0">
-                <p class="footer-copy">© 2024 <a href="../index.html">PT Mulya Nusantara Sakti</a> — izinajadulu.com & Doctor.TAX. All rights reserved.</p>
+                <p class="footer-copy">© 2024 <a href="../index.html">PT Mulya Nusantara Sakti</a> — izinajadulu.com &
+                    Doctor.TAX. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="../index.html" class="footer-bottom-link">Beranda</a>
                     <a href="../index.html#layanan" class="footer-bottom-link">Layanan</a>
@@ -1292,10 +1839,13 @@
     <!-- Floating WA -->
     <div id="wa-float">
         <span class="wa-tooltip">Chat dengan kami</span>
-        <a href="https://wa.me/6283151165600?text=Halo+Izin+Aja+Dulu" target="_blank" rel="noopener" class="wa-float-btn" aria-label="WhatsApp">
+        <a href="https://wa.me/6283151165600?text=Halo+Izin+Aja+Dulu" target="_blank" rel="noopener"
+            class="wa-float-btn" aria-label="WhatsApp">
             <svg width="28" height="28" fill="white" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path d="M11.5 2C6.262 2 2 6.262 2 11.5c0 1.862.518 3.597 1.414 5.086L2 22l5.567-1.389A9.451 9.451 0 0011.5 21C16.738 21 21 16.738 21 11.5S16.738 2 11.5 2z"/>
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                    d="M11.5 2C6.262 2 2 6.262 2 11.5c0 1.862.518 3.597 1.414 5.086L2 22l5.567-1.389A9.451 9.451 0 0011.5 21C16.738 21 21 16.738 21 11.5S16.738 2 11.5 2z" />
             </svg>
         </a>
     </div>
@@ -1303,10 +1853,11 @@
     <!-- Back to Top -->
     <button id="back-to-top" aria-label="Kembali ke atas">
         <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path d="M5 15l7-7 7 7"/>
+            <path d="M5 15l7-7 7 7" />
         </svg>
     </button>
 
     <script src="/js/main.js"></script>
 </body>
+
 </html>
