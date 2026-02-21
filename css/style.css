@@ -284,37 +284,138 @@ button {
   box-shadow: var(--shadow-lg);
 }
 
+/* ============================================================
+   REPLACE SEMUA BAGIAN INI DI style.css
+   ============================================================ */
+
 .nav-main-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  height: 80px; /* tinggi navbar profesional */
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: visible;   /* ← kunci! logo bisa meluber ke atas/bawah navbar */
 }
 
-/* LOGO WRAPPER */
 .nav-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-/* ICON CONTAINER */
+
+/* DESKTOP */
 .nav-logo-icon {
-  height: 60px; /* tinggi logo di desktop - disesuaikan untuk gambar 500x500 */
+  height: 120px;       /* besar tapi proporsional dengan navbar 80px */
   display: flex;
   align-items: center;
 }
-/* IMAGE */
+
 .nav-logo-icon img {
   height: 100%;
-  width: auto; /* jaga rasio */
-  max-width: 220px; /* batasi agar tidak terlalu besar */
+  width: auto;
+  max-width: 300px;
   object-fit: contain;
   display: block;
-  border-radius: 8px;
+  border-radius: 0;
+  background: transparent;
 }
+
+/* TABLET */
+@media (max-width: 1100px) {
+  .nav-logo-icon {
+    height: 100px;
+  }
+  .nav-logo-icon img {
+    max-width: 260px;
+  }
+}
+
+/* MOBILE (max 900px) */
+@media (max-width: 900px) {
+  .nav-main-content {
+    height: 80px;
+    min-height: 80px;
+    padding: 0 16px;
+    gap: 12px;
+    overflow: visible;
+  }
+
+  .nav-logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 56px);
+  }
+
+  .nav-logo-icon {
+    height: 110px;    /* lebih besar dari navbar supaya jelas */
+  }
+
+  .nav-logo-icon img {
+    height: 100%;
+    width: auto;
+    max-width: 260px;
+    object-fit: contain;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .nav-hamburger {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}
+
+/* HP KECIL (max 480px) */
+@media (max-width: 480px) {
+  .nav-main-content {
+    height: 75px;
+    min-height: 75px;
+    padding: 0 12px;
+    overflow: visible;
+  }
+
+  .nav-logo-icon {
+    height: 100px;
+  }
+
+  .nav-logo-icon img {
+    max-width: 220px;
+  }
+
+  .nav-hamburger {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+}
+
+/* HP MINI (max 360px) */
+@media (max-width: 360px) {
+  .nav-logo-icon {
+    height: 85px;
+  }
+
+  .nav-logo-icon img {
+    max-width: 180px;
+  }
+}
+
+
+
+
+
+
+
+
+
 .nav-logo-text {
   display: flex;
   flex-direction: column;
