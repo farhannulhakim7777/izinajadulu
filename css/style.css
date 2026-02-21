@@ -302,7 +302,7 @@ button {
 }
 /* ICON CONTAINER */
 .nav-logo-icon {
-  height: 50px; /* tinggi logo di desktop */
+  height: 60px; /* tinggi logo di desktop - disesuaikan untuk gambar 500x500 */
   display: flex;
   align-items: center;
 }
@@ -310,10 +310,10 @@ button {
 .nav-logo-icon img {
   height: 100%;
   width: auto; /* jaga rasio */
-  max-width: 180px; /* batasi agar tidak terlalu besar */
+  max-width: 220px; /* batasi agar tidak terlalu besar */
   object-fit: contain;
   display: block;
-  border-radius: 25%;
+  border-radius: 8px;
 }
 .nav-logo-text {
   display: flex;
@@ -2621,11 +2621,11 @@ section {
   }
 
   .nav-logo-icon {
-    height: 34px;
+    height: 42px;
   }
 
   .nav-logo-icon img {
-    max-width: 110px;
+    max-width: 140px;
   }
 
   .nav-hamburger {

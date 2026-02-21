@@ -1,561 +1,610 @@
 /* ============================================================
    IZINAJADULU — Main JavaScript
-   Version: 2.0
+   Version: 2.1
    ============================================================ */
 
-'use strict';
+'use strict'
 
 /* ============================================================
    LOADER
    ============================================================ */
 window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
+  const loader = document.getElementById('loader')
+  if (!loader) return
   setTimeout(() => {
-    loader.classList.add('hidden');
-    document.body.style.overflow = '';
-  }, 2000);
-});
+    loader.classList.add('hidden')
+    document.body.style.overflow = ''
+  }, 2000)
+})
 
-// Block scroll during load
-document.body.style.overflow = 'hidden';
+// Block scroll HANYA jika halaman memiliki loader
+if (document.getElementById('loader')) {
+  document.body.style.overflow = 'hidden'
+}
 
 /* ============================================================
    SCROLL PROGRESS BAR
    ============================================================ */
-function initScrollProgress() {
-  const bar = document.getElementById('scroll-progress');
-  if (!bar) return;
+function initScrollProgress () {
+  const bar = document.getElementById('scroll-progress')
+  if (!bar) return
 
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = `${Math.min(progress, 100)}%`;
-  }, { passive: true });
+  window.addEventListener(
+    'scroll',
+    () => {
+      const scrollTop = window.scrollY
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
+      bar.style.width = `${Math.min(progress, 100)}%`
+    },
+    { passive: true }
+  )
 }
 
 /* ============================================================
    NAVBAR
    ============================================================ */
-function initNavbar() {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) return;
+function initNavbar () {
+  const navbar = document.getElementById('navbar')
+  if (!navbar) return
 
   // Scroll behavior
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const current = window.scrollY;
-    if (current > 80) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    lastScroll = current;
-  }, { passive: true });
+  let lastScroll = 0
+  window.addEventListener(
+    'scroll',
+    () => {
+      const current = window.scrollY
+      if (current > 80) {
+        navbar.classList.add('scrolled')
+      } else {
+        navbar.classList.remove('scrolled')
+      }
+      lastScroll = current
+    },
+    { passive: true }
+  )
 
   // Hamburger
-  const hamburger = navbar.querySelector('.nav-hamburger');
-  const mobileMenu = navbar.querySelector('.nav-mobile');
-  const mobileLayananToggle = navbar.querySelector('.mobile-layanan-toggle');
-  const mobileLayananSub = navbar.querySelector('.mobile-layanan-sub');
+  const hamburger = navbar.querySelector('.nav-hamburger')
+  const mobileMenu = navbar.querySelector('.nav-mobile')
+  const mobileLayananToggle = navbar.querySelector('.mobile-layanan-toggle')
+  const mobileLayananSub = navbar.querySelector('.mobile-layanan-sub')
 
-  function setMenuState(open) {
-    if (!hamburger || !mobileMenu) return;
-    hamburger.classList.toggle('open', open);
-    mobileMenu.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  function setMenuState (open) {
+    if (!hamburger || !mobileMenu) return
+    hamburger.classList.toggle('open', open)
+    mobileMenu.classList.toggle('open', open)
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false')
     if (window.innerWidth <= 900) {
-      document.body.style.overflow = open ? 'hidden' : '';
+      document.body.style.overflow = open ? 'hidden' : ''
     }
   }
 
   if (hamburger && mobileMenu) {
-    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-expanded', 'false')
     hamburger.addEventListener('click', () => {
-      const willOpen = !mobileMenu.classList.contains('open');
-      setMenuState(willOpen);
-    });
+      const willOpen = !mobileMenu.classList.contains('open')
+      setMenuState(willOpen)
+    })
 
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.classList.contains('open')) return;
+    document.addEventListener('click', e => {
+      if (!mobileMenu.classList.contains('open')) return
       if (!navbar.contains(e.target)) {
-        setMenuState(false);
+        setMenuState(false)
       }
-    });
+    })
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
-        setMenuState(false);
+        setMenuState(false)
       }
-    });
+    })
 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) {
-        setMenuState(false);
+        setMenuState(false)
       }
-    });
+    })
   }
 
   // Mobile sub-menu toggles
   if (mobileLayananToggle && mobileLayananSub) {
-    mobileLayananToggle.setAttribute('aria-expanded', 'false');
-    mobileLayananSub.style.display = 'none';
-    mobileLayananToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isOpen = mobileLayananSub.style.display === 'flex';
-      mobileLayananSub.style.display = isOpen ? 'none' : 'flex';
-      mobileLayananToggle.classList.toggle('open', !isOpen);
-      mobileLayananToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-    });
+    mobileLayananToggle.setAttribute('aria-expanded', 'false')
+    mobileLayananSub.style.display = 'none'
+    mobileLayananToggle.addEventListener('click', e => {
+      e.preventDefault()
+      const isOpen = mobileLayananSub.style.display === 'flex'
+      mobileLayananSub.style.display = isOpen ? 'none' : 'flex'
+      mobileLayananToggle.classList.toggle('open', !isOpen)
+      mobileLayananToggle.setAttribute(
+        'aria-expanded',
+        isOpen ? 'false' : 'true'
+      )
+    })
   }
 
   // Active link highlighting
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = navbar.querySelectorAll('.nav-link[data-section]');
+  const sections = document.querySelectorAll('section[id]')
+  const navLinks = navbar.querySelectorAll('.nav-link[data-section]')
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.dataset.section === entry.target.id) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }, { threshold: 0.3 });
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active')
+            if (link.dataset.section === entry.target.id) {
+              link.classList.add('active')
+            }
+          })
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
 
-  sections.forEach(s => observer.observe(s));
+  sections.forEach(s => observer.observe(s))
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const target = document.querySelector(link.getAttribute('href'));
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'))
       if (target) {
-        e.preventDefault();
-        const offset = navbar.offsetHeight + 16;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
+        e.preventDefault()
+        const offset = navbar.offsetHeight + 16
+        const top = target.getBoundingClientRect().top + window.scrollY - offset
+        window.scrollTo({ top, behavior: 'smooth' })
 
         // Close mobile menu if open
         if (hamburger && mobileMenu) {
-          setMenuState(false);
+          setMenuState(false)
         }
       }
-    });
-  });
+    })
+  })
 }
 
 /* ============================================================
    REVEAL ON SCROLL
    ============================================================ */
-function initReveal() {
-  const elements = document.querySelectorAll('.reveal');
-  if (!elements.length) return;
+function initReveal () {
+  const elements = document.querySelectorAll('.reveal')
+  if (!elements.length) return
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  )
 
-  elements.forEach(el => observer.observe(el));
+  elements.forEach(el => observer.observe(el))
 }
 
 /* ============================================================
    COUNTER ANIMATION
    ============================================================ */
-function animateCounter(el, target, suffix = '', duration = 1800) {
-  const start = performance.now();
-  const initial = 0;
+function animateCounter (el, target, suffix = '', duration = 1800) {
+  const start = performance.now()
+  const initial = 0
 
-  function update(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
+  function update (now) {
+    const elapsed = now - start
+    const progress = Math.min(elapsed / duration, 1)
     // Ease out quart
-    const eased = 1 - Math.pow(1 - progress, 4);
-    const current = Math.round(initial + (target - initial) * eased);
-    el.textContent = current.toLocaleString('id-ID') + suffix;
-    if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = target.toLocaleString('id-ID') + suffix;
+    const eased = 1 - Math.pow(1 - progress, 4)
+    const current = Math.round(initial + (target - initial) * eased)
+    el.textContent = current.toLocaleString('id-ID') + suffix
+    if (progress < 1) requestAnimationFrame(update)
+    else el.textContent = target.toLocaleString('id-ID') + suffix
   }
 
-  requestAnimationFrame(update);
+  requestAnimationFrame(update)
 }
 
-function initCounters() {
-  const counters = document.querySelectorAll('[data-count]');
-  if (!counters.length) return;
+function initCounters () {
+  const counters = document.querySelectorAll('[data-count]')
+  if (!counters.length) return
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix || '';
-        animateCounter(el, target, suffix);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target
+          const target = parseInt(el.dataset.count, 10)
+          const suffix = el.dataset.suffix || ''
+          animateCounter(el, target, suffix)
+          observer.unobserve(el)
+        }
+      })
+    },
+    { threshold: 0.5 }
+  )
 
-  counters.forEach(el => observer.observe(el));
+  counters.forEach(el => observer.observe(el))
 }
 
 /* ============================================================
    CAROUSEL (Gallery)
    ============================================================ */
-function initCarousel() {
-  const wrapper = document.querySelector('.carousel-wrapper');
-  if (!wrapper) return;
+function initCarousel () {
+  const wrapper = document.querySelector('.carousel-wrapper')
+  if (!wrapper) return
 
-  const track = wrapper.querySelector('.carousel-track');
-  const slides = wrapper.querySelectorAll('.carousel-slide');
-  const prevBtn = wrapper.querySelector('.carousel-btn-prev');
-  const nextBtn = wrapper.querySelector('.carousel-btn-next');
-  const dotsContainer = wrapper.querySelector('.carousel-dots');
+  const track = wrapper.querySelector('.carousel-track')
+  const slides = wrapper.querySelectorAll('.carousel-slide')
+  const prevBtn = wrapper.querySelector('.carousel-btn-prev')
+  const nextBtn = wrapper.querySelector('.carousel-btn-next')
+  const dotsContainer = wrapper.querySelector('.carousel-dots')
 
-  if (!track || !slides.length) return;
+  if (!track || !slides.length) return
 
-  let currentIndex = 0;
-  let slidesVisible = getSlidesVisible();
-  let maxIndex = Math.max(0, slides.length - slidesVisible);
+  let currentIndex = 0
+  let slidesVisible = getSlidesVisible()
+  let maxIndex = Math.max(0, slides.length - slidesVisible)
 
   // Drag state
-  let isDragging = false;
-  let startX = 0;
-  let startTranslate = 0;
-  let currentTranslate = 0;
+  let isDragging = false
+  let startX = 0
+  let startTranslate = 0
+  let currentTranslate = 0
 
-  function getSlidesVisible() {
-    if (window.innerWidth <= 640) return 1;
-    if (window.innerWidth <= 900) return 2;
-    return 3;
+  function getSlidesVisible () {
+    if (window.innerWidth <= 640) return 1
+    if (window.innerWidth <= 900) return 2
+    return 3
   }
 
-  function getSlideWidth() {
-    const gap = 20;
-    const containerWidth = track.parentElement.offsetWidth;
-    return (containerWidth - gap * (slidesVisible - 1)) / slidesVisible;
+  function getSlideWidth () {
+    const gap = 20
+    const containerWidth = track.parentElement.offsetWidth
+    return (containerWidth - gap * (slidesVisible - 1)) / slidesVisible
   }
 
-  function getTranslateX() {
-    const slideWidth = getSlideWidth();
-    const gap = 20;
-    return currentIndex * (slideWidth + gap);
+  function getTranslateX () {
+    const slideWidth = getSlideWidth()
+    const gap = 20
+    return currentIndex * (slideWidth + gap)
   }
 
-  function updateCarousel(animate = true) {
-    const translateX = getTranslateX();
-    currentTranslate = translateX;
+  function updateCarousel (animate = true) {
+    const translateX = getTranslateX()
+    currentTranslate = translateX
 
     if (animate) {
-      track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      track.style.transition =
+        'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
     } else {
-      track.style.transition = 'none';
+      track.style.transition = 'none'
     }
-    track.style.transform = `translateX(-${translateX}px)`;
+    track.style.transform = `translateX(-${translateX}px)`
 
     // Update buttons
-    if (prevBtn) prevBtn.disabled = currentIndex === 0;
-    if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
+    if (prevBtn) prevBtn.disabled = currentIndex === 0
+    if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex
 
     // Update dots
-    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+    const dots = dotsContainer
+      ? dotsContainer.querySelectorAll('.carousel-dot')
+      : []
     dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
+      dot.classList.toggle('active', i === currentIndex)
+    })
   }
 
-  function createDots() {
-    if (!dotsContainer) return;
-    dotsContainer.innerHTML = '';
-    const dotCount = maxIndex + 1;
+  function createDots () {
+    if (!dotsContainer) return
+    dotsContainer.innerHTML = ''
     for (let i = 0; i <= maxIndex; i++) {
-      const dot = document.createElement('button');
-      dot.className = `carousel-dot${i === 0 ? ' active' : ''}`;
-      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      const dot = document.createElement('button')
+      dot.className = `carousel-dot${i === 0 ? ' active' : ''}`
+      dot.setAttribute('aria-label', `Slide ${i + 1}`)
       dot.addEventListener('click', () => {
-        currentIndex = i;
-        updateCarousel();
-      });
-      dotsContainer.appendChild(dot);
+        currentIndex = i
+        updateCarousel()
+      })
+      dotsContainer.appendChild(dot)
     }
   }
 
   // Drag / Swipe
-  function onPointerDown(e) {
-    isDragging = true;
-    startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
-    startTranslate = getTranslateX();
-    track.classList.add('dragging');
-    track.style.transition = 'none';
+  function onPointerDown (e) {
+    isDragging = true
+    startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX
+    startTranslate = getTranslateX()
+    track.classList.add('dragging')
+    track.style.transition = 'none'
   }
 
-  function onPointerMove(e) {
-    if (!isDragging) return;
-    const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
-    const diff = startX - clientX;
-    const translate = Math.max(0, startTranslate + diff);
-    track.style.transform = `translateX(-${translate}px)`;
+  function onPointerMove (e) {
+    if (!isDragging) return
+    const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX
+    const diff = startX - clientX
+    const translate = Math.max(0, startTranslate + diff)
+    track.style.transform = `translateX(-${translate}px)`
   }
 
-  function onPointerUp(e) {
-    if (!isDragging) return;
-    isDragging = false;
-    track.classList.remove('dragging');
+  function onPointerUp (e) {
+    if (!isDragging) return
+    isDragging = false
+    track.classList.remove('dragging')
 
-    const clientX = e.type === 'touchend' ? e.changedTouches[0].clientX : e.clientX;
-    const diff = startX - clientX;
-    const threshold = getSlideWidth() * 0.25;
+    const clientX =
+      e.type === 'touchend' ? e.changedTouches[0].clientX : e.clientX
+    const diff = startX - clientX
+    const threshold = getSlideWidth() * 0.25
 
     if (Math.abs(diff) > threshold) {
       if (diff > 0 && currentIndex < maxIndex) {
-        currentIndex++;
+        currentIndex++
       } else if (diff < 0 && currentIndex > 0) {
-        currentIndex--;
+        currentIndex--
       }
     }
-    updateCarousel();
+    updateCarousel()
   }
 
   // Event listeners
-  track.addEventListener('mousedown', onPointerDown);
-  document.addEventListener('mousemove', onPointerMove);
-  document.addEventListener('mouseup', onPointerUp);
-  track.addEventListener('touchstart', onPointerDown, { passive: true });
-  document.addEventListener('touchmove', onPointerMove, { passive: true });
-  document.addEventListener('touchend', onPointerUp);
+  track.addEventListener('mousedown', onPointerDown)
+  document.addEventListener('mousemove', onPointerMove)
+  document.addEventListener('mouseup', onPointerUp)
+  track.addEventListener('touchstart', onPointerDown, { passive: true })
+  document.addEventListener('touchmove', onPointerMove, { passive: true })
+  document.addEventListener('touchend', onPointerUp)
 
   // Prevent click on drag
-  track.addEventListener('click', (e) => {
+  track.addEventListener('click', e => {
     if (Math.abs(startX - (e.type === 'click' ? e.clientX : 0)) > 5) {
-      e.preventDefault();
-      e.stopPropagation();
+      e.preventDefault()
+      e.stopPropagation()
     }
-  });
+  })
 
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) { currentIndex--; updateCarousel(); }
-    });
+      if (currentIndex > 0) {
+        currentIndex--
+        updateCarousel()
+      }
+    })
   }
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
-    });
+      if (currentIndex < maxIndex) {
+        currentIndex++
+        updateCarousel()
+      }
+    })
   }
 
   // Keyboard
-  wrapper.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft' && currentIndex > 0) { currentIndex--; updateCarousel(); }
-    if (e.key === 'ArrowRight' && currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
-  });
+  wrapper.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft' && currentIndex > 0) {
+      currentIndex--
+      updateCarousel()
+    }
+    if (e.key === 'ArrowRight' && currentIndex < maxIndex) {
+      currentIndex++
+      updateCarousel()
+    }
+  })
 
   // Auto-play
   let autoPlay = setInterval(() => {
-    if (currentIndex >= maxIndex) currentIndex = 0;
-    else currentIndex++;
-    updateCarousel();
-  }, 4000);
+    if (currentIndex >= maxIndex) currentIndex = 0
+    else currentIndex++
+    updateCarousel()
+  }, 4000)
 
-  wrapper.addEventListener('mouseenter', () => clearInterval(autoPlay));
+  wrapper.addEventListener('mouseenter', () => clearInterval(autoPlay))
   wrapper.addEventListener('mouseleave', () => {
     autoPlay = setInterval(() => {
-      if (currentIndex >= maxIndex) currentIndex = 0;
-      else currentIndex++;
-      updateCarousel();
-    }, 4000);
-  });
+      if (currentIndex >= maxIndex) currentIndex = 0
+      else currentIndex++
+      updateCarousel()
+    }, 4000)
+  })
 
   // Resize
-  let resizeTimeout;
+  let resizeTimeout
   window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
+    clearTimeout(resizeTimeout)
     resizeTimeout = setTimeout(() => {
-      slidesVisible = getSlidesVisible();
-      maxIndex = Math.max(0, slides.length - slidesVisible);
-      currentIndex = Math.min(currentIndex, maxIndex);
-      createDots();
-      updateCarousel(false);
-    }, 200);
-  });
+      slidesVisible = getSlidesVisible()
+      maxIndex = Math.max(0, slides.length - slidesVisible)
+      currentIndex = Math.min(currentIndex, maxIndex)
+      createDots()
+      updateCarousel(false)
+    }, 200)
+  })
 
-  createDots();
-  updateCarousel(false);
+  createDots()
+  updateCarousel(false)
 }
 
 /* ============================================================
    FAQ ACCORDION
    ============================================================ */
-function initFAQ() {
-  const items = document.querySelectorAll('.faq-item');
-  if (!items.length) return;
+function initFAQ () {
+  const items = document.querySelectorAll('.faq-item')
+  if (!items.length) return
 
   items.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    if (!question) return;
+    const question = item.querySelector('.faq-question')
+    if (!question) return
 
     question.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
+      const isOpen = item.classList.contains('open')
 
       // Close all
-      items.forEach(i => i.classList.remove('open'));
+      items.forEach(i => i.classList.remove('open'))
 
       // Toggle current
-      if (!isOpen) item.classList.add('open');
-    });
-  });
+      if (!isOpen) item.classList.add('open')
+    })
+  })
 }
 
 /* ============================================================
    STATS COUNTER TRIGGER
    ============================================================ */
-function initStats() {
-  const statNums = document.querySelectorAll('.stat-num[data-count]');
-  if (!statNums.length) return;
+function initStats () {
+  const statNums = document.querySelectorAll('.stat-num[data-count]')
+  if (!statNums.length) return
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix || '';
-        animateCounter(el, target, suffix);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target
+          const target = parseInt(el.dataset.count, 10)
+          const suffix = el.dataset.suffix || ''
+          animateCounter(el, target, suffix)
+          observer.unobserve(el)
+        }
+      })
+    },
+    { threshold: 0.5 }
+  )
 
-  statNums.forEach(el => observer.observe(el));
+  statNums.forEach(el => observer.observe(el))
 }
 
 /* ============================================================
    HERO COUNTER (inline)
    ============================================================ */
-function initHeroCounters() {
-  const heroNums = document.querySelectorAll('.hero-stat-num[data-count]');
-  if (!heroNums.length) return;
+function initHeroCounters () {
+  const heroNums = document.querySelectorAll('.hero-stat-num[data-count]')
+  if (!heroNums.length) return
   // Trigger after load
   setTimeout(() => {
     heroNums.forEach(el => {
-      const target = parseInt(el.dataset.count, 10);
-      const suffix = el.dataset.suffix || '';
-      animateCounter(el, target, suffix, 1500);
-    });
-  }, 1200);
+      const target = parseInt(el.dataset.count, 10)
+      const suffix = el.dataset.suffix || ''
+      animateCounter(el, target, suffix, 1500)
+    })
+  }, 1200)
 }
 
 /* ============================================================
    SMOOTH HOVER CARDS (tilt effect)
    ============================================================ */
-function initTiltCards() {
-  const cards = document.querySelectorAll('.service-card, .why-card');
+function initTiltCards () {
+  const cards = document.querySelectorAll('.service-card, .why-card')
   cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -4;
-      const rotateY = ((x - centerX) / centerX) * 4;
-      card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      const centerX = rect.width / 2
+      const centerY = rect.height / 2
+      const rotateX = ((y - centerY) / centerY) * -4
+      const rotateY = ((x - centerX) / centerX) * 4
+      card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+    })
     card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
+      card.style.transform = ''
+    })
+  })
 }
 
 /* ============================================================
    BLOG ARTICLE MODAL
    ============================================================ */
-function initBlogCards() {
-  const cards = document.querySelectorAll('.blog-card');
+function initBlogCards () {
+  const cards = document.querySelectorAll('.blog-card')
   cards.forEach(card => {
     card.addEventListener('click', () => {
-      const url = card.dataset.url;
-      if (url && url !== '#') window.open(url, '_blank');
-    });
-  });
+      const url = card.dataset.url
+      if (url && url !== '#') window.open(url, '_blank')
+    })
+  })
 }
 
 /* ============================================================
    SERVICE CARD LINKS
    ============================================================ */
-function initServiceCards() {
-  const cards = document.querySelectorAll('.service-card[data-href]');
+function initServiceCards () {
+  const cards = document.querySelectorAll('.service-card[data-href]')
   cards.forEach(card => {
     card.addEventListener('click', () => {
-      const href = card.dataset.href;
-      if (href && href !== '#') window.location.href = href;
-    });
-    card.style.cursor = 'pointer';
-  });
+      const href = card.dataset.href
+      if (href && href !== '#') window.location.href = href
+    })
+    card.style.cursor = 'pointer'
+  })
 }
 
 /* ============================================================
    BACK TO TOP
    ============================================================ */
-function initBackToTop() {
-  const btn = document.getElementById('back-to-top');
-  if (!btn) return;
+function initBackToTop () {
+  const btn = document.getElementById('back-to-top')
+  if (!btn) return
 
-  window.addEventListener('scroll', () => {
-    btn.style.opacity = window.scrollY > 400 ? '1' : '0';
-    btn.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
-  }, { passive: true });
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (window.scrollY > 400) {
+        btn.classList.add('visible')
+      } else {
+        btn.classList.remove('visible')
+      }
+    },
+    { passive: true }
+  )
 
   btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
 }
 
 /* ============================================================
    DOCUMENT MODAL (for PDF/Company Profile link)
    ============================================================ */
-function initDocumentLinks() {
-  const docBtns = document.querySelectorAll('[data-doc]');
+function initDocumentLinks () {
+  const docBtns = document.querySelectorAll('[data-doc]')
   docBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const docType = btn.dataset.doc;
-      // Placeholder: replace with actual PDF URLs when available
+    btn.addEventListener('click', e => {
+      e.preventDefault()
+      const docType = btn.dataset.doc
       const urls = {
-        'company-profile': '#company-profile-pdf',
-        'pamflet': '#pamflet-pdf'
-      };
-      const url = urls[docType];
-      if (url && url !== '#' && !url.startsWith('#')) {
-        window.open(url, '_blank');
-      } else {
-        showToast('Dokumen segera tersedia. Hubungi kami via WhatsApp untuk informasi lengkap.');
+        'company-profile': 'layanan/company-profile.html',
+        pamflet: '#pamflet-pdf'
       }
-    });
-  });
+      const url = urls[docType]
+      if (url && !url.startsWith('#')) {
+        window.location.href = url
+      } else {
+        showToast(
+          'Dokumen segera tersedia. Hubungi kami via WhatsApp untuk informasi lengkap.'
+        )
+      }
+    })
+  })
 }
 
 /* ============================================================
    TOAST NOTIFICATION
    ============================================================ */
-function showToast(message, duration = 3500) {
-  const existing = document.querySelector('.toast-notification');
-  if (existing) existing.remove();
+function showToast (message, duration = 3500) {
+  const existing = document.querySelector('.toast-notification')
+  if (existing) existing.remove()
 
-  const toast = document.createElement('div');
-  toast.className = 'toast-notification';
+  const toast = document.createElement('div')
+  toast.className = 'toast-notification'
   toast.innerHTML = `
     <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
       <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
     </svg>
     <span>${message}</span>
-  `;
+  `
   toast.style.cssText = `
     position: fixed; bottom: 110px; left: 50%; transform: translateX(-50%) translateY(20px);
     background: #0A1628; color: white; padding: 14px 24px; border-radius: 12px;
@@ -564,36 +613,36 @@ function showToast(message, duration = 3500) {
     border: 1px solid rgba(59,158,232,0.3);
     opacity: 0; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     max-width: calc(100vw - 48px); text-align: center;
-  `;
-  document.body.appendChild(toast);
+  `
+  document.body.appendChild(toast)
 
   requestAnimationFrame(() => {
-    toast.style.opacity = '1';
-    toast.style.transform = 'translateX(-50%) translateY(0)';
-  });
+    toast.style.opacity = '1'
+    toast.style.transform = 'translateX(-50%) translateY(0)'
+  })
 
   setTimeout(() => {
-    toast.style.opacity = '0';
-    toast.style.transform = 'translateX(-50%) translateY(20px)';
-    setTimeout(() => toast.remove(), 300);
-  }, duration);
+    toast.style.opacity = '0'
+    toast.style.transform = 'translateX(-50%) translateY(20px)'
+    setTimeout(() => toast.remove(), 300)
+  }, duration)
 }
 
 /* ============================================================
    INIT ALL
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-  initScrollProgress();
-  initNavbar();
-  initReveal();
-  initCounters();
-  initCarousel();
-  initFAQ();
-  initStats();
-  initHeroCounters();
-  initTiltCards();
-  initBlogCards();
-  initServiceCards();
-  initBackToTop();
-  initDocumentLinks();
-});
+  initScrollProgress()
+  initNavbar()
+  initReveal()
+  initCounters()
+  initCarousel()
+  initFAQ()
+  initStats()
+  initHeroCounters()
+  initTiltCards()
+  initBlogCards()
+  initServiceCards()
+  initBackToTop()
+  initDocumentLinks()
+})
