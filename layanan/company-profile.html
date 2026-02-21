@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="/css/style.css" />
     <style>
         /* =====================================================
-           COMPANY PROFILE PAGE — Scoped Styles
+           COMPANY PROFILE PAGE — Scoped Styles (Light Theme)
            ===================================================== */
 
         /* Hero */
         .cp-hero {
             min-height: 100vh;
-            background: var(--grad-hero);
+            background: linear-gradient(135deg, #e8f4ff 0%, #cce8ff 40%, #f0f9ff 100%);
             display: flex;
             align-items: center;
             padding-top: 100px;
@@ -28,8 +28,8 @@
             position: absolute;
             inset: 0;
             background-image:
-                linear-gradient(rgba(59,158,232,.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59,158,232,.05) 1px, transparent 1px);
+                linear-gradient(rgba(27,95,186,.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(27,95,186,.05) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
@@ -39,8 +39,8 @@
             border-radius: 50%;
             filter: blur(90px);
         }
-        .cp-shape-1 { width: 700px; height: 700px; background: var(--blue); opacity: .1; top: -200px; right: -150px; }
-        .cp-shape-2 { width: 400px; height: 400px; background: var(--accent); opacity: .06; bottom: -100px; left: 5%; }
+        .cp-shape-1 { width: 700px; height: 700px; background: #7dc4f5; opacity: .2; top: -200px; right: -150px; }
+        .cp-shape-2 { width: 400px; height: 400px; background: #0ba4c4; opacity: .1; bottom: -100px; left: 5%; }
 
         .cp-hero-inner {
             position: relative;
@@ -56,9 +56,9 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(0,212,255,.1);
-            border: 1px solid rgba(0,212,255,.25);
-            color: var(--accent);
+            background: rgba(11,164,196,.1);
+            border: 1px solid rgba(11,164,196,.25);
+            color: #0ba4c4;
             font-size: .78rem;
             font-weight: 700;
             letter-spacing: .1em;
@@ -70,7 +70,7 @@
         .cp-hero-tag-dot {
             width: 6px; height: 6px;
             border-radius: 50%;
-            background: var(--accent);
+            background: #0ba4c4;
             animation: pulse 2s infinite;
         }
 
@@ -78,17 +78,17 @@
             font-family: var(--font-display);
             font-size: clamp(2.4rem, 4.5vw, 4rem);
             font-weight: 900;
-            color: white;
+            color: #0d2045;
             line-height: 1.1;
             letter-spacing: -.03em;
             margin-bottom: 12px;
         }
-        .cp-hero-title .accent { color: var(--accent); }
+        .cp-hero-title .accent { color: #1b5fba; }
 
         .cp-hero-company {
             font-size: 1rem;
             font-weight: 600;
-            color: rgba(255,255,255,.5);
+            color: #4a7fa8;
             letter-spacing: .06em;
             text-transform: uppercase;
             margin-bottom: 28px;
@@ -96,7 +96,7 @@
 
         .cp-hero-desc {
             font-size: 1.05rem;
-            color: rgba(255,255,255,.7);
+            color: #1b5fba;
             line-height: 1.8;
             margin-bottom: 40px;
             max-width: 500px;
@@ -113,12 +113,12 @@
             gap: 0;
             margin-top: 52px;
             padding-top: 36px;
-            border-top: 1px solid rgba(255,255,255,.1);
+            border-top: 1px solid rgba(27,95,186,.15);
         }
         .cp-hero-stat {
             flex: 1;
             padding-right: 32px;
-            border-right: 1px solid rgba(255,255,255,.1);
+            border-right: 1px solid rgba(27,95,186,.15);
             margin-right: 32px;
         }
         .cp-hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
@@ -126,35 +126,35 @@
             font-family: var(--font-display);
             font-size: 2.2rem;
             font-weight: 900;
-            color: white;
+            color: #0d2045;
             line-height: 1;
             margin-bottom: 4px;
         }
-        .cp-hero-stat-num span { color: var(--accent); }
-        .cp-hero-stat-label { font-size: .78rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .05em; }
+        .cp-hero-stat-num span { color: #1b5fba; }
+        .cp-hero-stat-label { font-size: .78rem; color: #4a7fa8; text-transform: uppercase; letter-spacing: .05em; }
 
         /* Director Card */
         .director-card {
-            background: rgba(255,255,255,.06);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,.12);
+            background: #ffffff;
+            border: 1px solid #d6e8f8;
             border-radius: var(--radius-lg);
             padding: 40px;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 8px 32px rgba(27,95,186,.12);
         }
         .director-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--blue), var(--accent));
+            background: linear-gradient(90deg, #1b5fba, #0ba4c4);
         }
         .director-avatar {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: var(--grad-blue);
+            background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -163,18 +163,18 @@
             font-weight: 900;
             color: white;
             margin-bottom: 20px;
-            border: 3px solid rgba(0,212,255,.3);
+            border: 3px solid rgba(11,164,196,.3);
         }
         .director-name {
             font-family: var(--font-display);
             font-size: 1.4rem;
             font-weight: 800;
-            color: white;
+            color: #0d2045;
             margin-bottom: 4px;
         }
         .director-title {
             font-size: .82rem;
-            color: var(--accent);
+            color: #0ba4c4;
             font-weight: 600;
             letter-spacing: .06em;
             text-transform: uppercase;
@@ -182,10 +182,10 @@
         }
         .director-quote {
             font-size: .9rem;
-            color: rgba(255,255,255,.7);
+            color: #4a7fa8;
             line-height: 1.75;
             font-style: italic;
-            border-left: 2px solid var(--accent);
+            border-left: 2px solid #0ba4c4;
             padding-left: 16px;
         }
         .director-brand-tags {
@@ -201,8 +201,8 @@
             font-weight: 700;
             letter-spacing: .05em;
         }
-        .brand-tag-blue { background: rgba(27,95,186,.3); color: var(--sky); border: 1px solid rgba(59,158,232,.3); }
-        .brand-tag-accent { background: rgba(0,212,255,.15); color: var(--accent); border: 1px solid rgba(0,212,255,.3); }
+        .brand-tag-blue { background: rgba(27,95,186,.08); color: #1b5fba; border: 1px solid rgba(27,95,186,.2); }
+        .brand-tag-accent { background: rgba(11,164,196,.08); color: #0ba4c4; border: 1px solid rgba(11,164,196,.25); }
 
         /* ── Breadcrumb ── */
         .breadcrumb {
@@ -210,16 +210,16 @@
             align-items: center;
             gap: 8px;
             font-size: .8rem;
-            color: rgba(255,255,255,.5);
+            color: #4a7fa8;
             margin-bottom: 24px;
         }
-        .breadcrumb a { color: rgba(255,255,255,.6); transition: color .2s; }
-        .breadcrumb a:hover { color: var(--accent); }
-        .breadcrumb-sep { color: rgba(255,255,255,.3); }
-        .breadcrumb-current { color: var(--accent); }
+        .breadcrumb a { color: #1b5fba; transition: color .2s; }
+        .breadcrumb a:hover { color: #0ba4c4; }
+        .breadcrumb-sep { color: #7bafd4; }
+        .breadcrumb-current { color: #0ba4c4; }
 
         /* ── Vision Mission ── */
-        #cp-visi-misi { background: var(--off-white); }
+        #cp-visi-misi { background: #f0f7ff; }
 
         .vm-grid {
             display: grid;
@@ -229,23 +229,23 @@
         }
 
         .vm-card {
-            background: var(--white);
+            background: #ffffff;
             border-radius: var(--radius-lg);
             padding: 44px 40px;
-            border: 1px solid var(--grey-light);
+            border: 1px solid #d6e8f8;
             position: relative;
             overflow: hidden;
             transition: all .3s var(--ease);
         }
-        .vm-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .vm-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); }
         .vm-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 4px;
         }
-        .vm-card.visi::before { background: var(--grad-blue); }
-        .vm-card.misi::before { background: linear-gradient(90deg, var(--sky), var(--accent)); }
+        .vm-card.visi::before { background: linear-gradient(90deg, #1b5fba, #3b9ee8); }
+        .vm-card.misi::before { background: linear-gradient(90deg, #3b9ee8, #0ba4c4); }
 
         .vm-icon {
             width: 56px; height: 56px;
@@ -254,13 +254,13 @@
             margin-bottom: 24px;
             font-size: 1.5rem;
         }
-        .vm-icon.blue { background: rgba(27,95,186,.1); color: var(--blue); }
-        .vm-icon.sky { background: rgba(0,212,255,.1); color: #0ba4c4; }
+        .vm-icon.blue { background: rgba(27,95,186,.1); color: #1b5fba; }
+        .vm-icon.sky { background: rgba(11,164,196,.1); color: #0ba4c4; }
 
         .vm-label {
             font-size: .75rem;
             font-weight: 700;
-            color: var(--blue);
+            color: #1b5fba;
             letter-spacing: .12em;
             text-transform: uppercase;
             margin-bottom: 12px;
@@ -269,12 +269,12 @@
             font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 800;
-            color: var(--text-dark);
+            color: #0d2045;
             margin-bottom: 16px;
         }
         .vm-text {
             font-size: .95rem;
-            color: var(--text-light);
+            color: #4a7fa8;
             line-height: 1.8;
         }
 
@@ -292,7 +292,7 @@
         .misi-num {
             width: 28px; height: 28px;
             border-radius: 50%;
-            background: var(--grad-blue);
+            background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
             color: white;
             font-size: .78rem;
             font-weight: 800;
@@ -302,7 +302,7 @@
         }
         .misi-item p {
             font-size: .9rem;
-            color: var(--text-light);
+            color: #4a7fa8;
             line-height: 1.65;
         }
 
@@ -313,18 +313,18 @@
             gap: 20px;
         }
         .nilai-card {
-            background: var(--white);
+            background: #ffffff;
             border-radius: var(--radius-md);
             padding: 28px 24px;
-            border: 1px solid var(--grey-light);
+            border: 1px solid #d6e8f8;
             text-align: center;
             transition: all .3s var(--ease);
         }
-        .nilai-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(27,95,186,.2); }
+        .nilai-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); border-color: rgba(27,95,186,.25); }
         .nilai-icon {
             width: 52px; height: 52px;
             border-radius: 50%;
-            background: var(--grad-blue);
+            background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 16px;
             font-size: 1.4rem;
@@ -332,17 +332,17 @@
         .nilai-title {
             font-size: .95rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: #0d2045;
             margin-bottom: 8px;
         }
         .nilai-desc {
             font-size: .8rem;
-            color: var(--text-light);
+            color: #4a7fa8;
             line-height: 1.6;
         }
 
         /* ── Services ── */
-        #cp-layanan { background: var(--white); }
+        #cp-layanan { background: #ffffff; }
 
         .cp-services-grid {
             display: grid;
@@ -350,8 +350,8 @@
             gap: 24px;
         }
         .cp-service-card {
-            background: var(--off-white);
-            border: 1px solid var(--grey-light);
+            background: #f0f7ff;
+            border: 1px solid #d6e8f8;
             border-radius: var(--radius-lg);
             padding: 32px 28px;
             transition: all .3s var(--ease);
@@ -363,32 +363,32 @@
             position: absolute;
             bottom: 0; left: 0; right: 0;
             height: 3px;
-            background: var(--grad-blue);
+            background: linear-gradient(90deg, #1b5fba, #3b9ee8);
             transform: scaleX(0);
             transition: transform .3s var(--ease);
             transform-origin: left;
         }
         .cp-service-card:hover {
             transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(27,95,186,.2);
+            box-shadow: 0 8px 32px rgba(27,95,186,.13);
+            border-color: rgba(27,95,186,.25);
         }
         .cp-service-card:hover::after { transform: scaleX(1); }
         .cp-service-card.highlight {
-            background: var(--grad-navy);
+            background: linear-gradient(135deg, #1b5fba 0%, #3b9ee8 100%);
             border-color: transparent;
         }
         .cp-service-card.highlight .cp-svc-title { color: white; }
-        .cp-service-card.highlight .cp-svc-desc { color: rgba(255,255,255,.7); }
-        .cp-service-card.highlight .cp-svc-icon { background: rgba(255,255,255,.1); color: var(--accent); }
-        .cp-service-card.highlight::after { background: linear-gradient(90deg, var(--accent), var(--sky)); }
+        .cp-service-card.highlight .cp-svc-desc { color: rgba(255,255,255,.8); }
+        .cp-service-card.highlight .cp-svc-icon { background: rgba(255,255,255,.15); color: white; }
+        .cp-service-card.highlight::after { background: linear-gradient(90deg, #0ba4c4, #7dc4f5); }
 
         .cp-svc-icon {
             width: 52px; height: 52px;
             border-radius: var(--radius-md);
             background: rgba(27,95,186,.1);
             display: flex; align-items: center; justify-content: center;
-            color: var(--blue);
+            color: #1b5fba;
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
@@ -396,23 +396,27 @@
             font-family: var(--font-display);
             font-size: 1.05rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: #0d2045;
             margin-bottom: 10px;
         }
         .cp-svc-desc {
             font-size: .85rem;
-            color: var(--text-light);
+            color: #4a7fa8;
             line-height: 1.7;
         }
 
         /* ── Pricing ── */
-        #cp-harga { background: var(--navy); overflow: hidden; position: relative; }
+        #cp-harga {
+            background: linear-gradient(135deg, #1b5fba 0%, #2272d9 50%, #3b9ee8 100%);
+            overflow: hidden;
+            position: relative;
+        }
         #cp-harga::before {
             content: '';
             position: absolute; inset: 0;
             background-image:
-                linear-gradient(rgba(59,158,232,.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59,158,232,.04) 1px, transparent 1px);
+                linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
@@ -426,29 +430,35 @@
         }
 
         .pricing-card {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.1);
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
             border-radius: var(--radius-lg);
             padding: 40px 32px;
             position: relative;
             transition: all .3s var(--ease);
         }
-        .pricing-card:hover { transform: translateY(-6px); background: rgba(255,255,255,.08); }
+        .pricing-card:hover { transform: translateY(-6px); background: rgba(255,255,255,.15); }
         .pricing-card.popular {
-            background: var(--grad-blue);
+            background: #ffffff;
             border-color: transparent;
             transform: scale(1.04);
-            box-shadow: 0 24px 60px rgba(27,95,186,.4);
+            box-shadow: 0 24px 60px rgba(0,0,0,.2);
         }
         .pricing-card.popular:hover { transform: scale(1.04) translateY(-6px); }
+        .pricing-card.popular .pricing-name,
+        .pricing-card.popular .pricing-price { color: #0d2045; }
+        .pricing-card.popular .pricing-tier { color: #1b5fba; }
+        .pricing-card.popular .pricing-period { color: #4a7fa8; }
+        .pricing-card.popular .pricing-feature { color: #0d2045; }
+        .pricing-card.popular .pricing-feature-check { background: rgba(27,95,186,.12); }
 
         .pricing-popular-badge {
             position: absolute;
             top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--navy);
+            background: #0ba4c4;
+            color: white;
             font-size: .7rem;
             font-weight: 800;
             padding: 5px 18px;
@@ -461,12 +471,11 @@
         .pricing-tier {
             font-size: .72rem;
             font-weight: 700;
-            color: var(--accent);
+            color: rgba(255,255,255,.8);
             letter-spacing: .12em;
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-        .pricing-card.popular .pricing-tier { color: rgba(255,255,255,.8); }
 
         .pricing-name {
             font-family: var(--font-display);
@@ -480,23 +489,24 @@
             font-family: var(--font-display);
             font-size: 2.4rem;
             font-weight: 900;
-            color: var(--accent);
+            color: #cce8ff;
             line-height: 1;
             margin-bottom: 4px;
         }
-        .pricing-card.popular .pricing-price { color: white; }
+        .pricing-card.popular .pricing-price { color: #1b5fba; }
 
         .pricing-period {
             font-size: .78rem;
-            color: rgba(255,255,255,.5);
+            color: rgba(255,255,255,.6);
             margin-bottom: 28px;
         }
 
         .pricing-divider {
             border: none;
-            border-top: 1px solid rgba(255,255,255,.12);
+            border-top: 1px solid rgba(255,255,255,.2);
             margin-bottom: 24px;
         }
+        .pricing-card.popular .pricing-divider { border-color: #d6e8f8; }
 
         .pricing-features {
             display: flex;
@@ -509,18 +519,17 @@
             align-items: flex-start;
             gap: 10px;
             font-size: .85rem;
-            color: rgba(255,255,255,.8);
+            color: rgba(255,255,255,.85);
             line-height: 1.5;
         }
         .pricing-feature-check {
             width: 18px; height: 18px;
             border-radius: 50%;
-            background: rgba(0,212,255,.2);
+            background: rgba(255,255,255,.2);
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
             margin-top: 1px;
         }
-        .pricing-card.popular .pricing-feature-check { background: rgba(255,255,255,.25); }
 
         .btn-pricing {
             display: flex;
@@ -538,19 +547,19 @@
         }
         .btn-pricing-outline {
             background: transparent;
-            border: 1.5px solid rgba(255,255,255,.25);
+            border: 1.5px solid rgba(255,255,255,.4);
             color: white;
         }
-        .btn-pricing-outline:hover { background: rgba(255,255,255,.1); border-color: white; color: white; }
+        .btn-pricing-outline:hover { background: rgba(255,255,255,.15); border-color: white; }
         .btn-pricing-solid {
-            background: white;
-            color: var(--navy);
+            background: linear-gradient(135deg, #1b5fba, #3b9ee8);
+            color: white;
             border: none;
         }
-        .btn-pricing-solid:hover { background: var(--accent); transform: translateY(-2px); }
+        .btn-pricing-solid:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,95,186,.3); }
 
         /* ── Testimoni Asli ── */
-        #cp-testimoni { background: var(--off-white); }
+        #cp-testimoni { background: #f0f7ff; }
 
         .cp-testi-grid {
             display: grid;
@@ -558,25 +567,25 @@
             gap: 24px;
         }
         .cp-testi-card {
-            background: var(--white);
+            background: #ffffff;
             border-radius: var(--radius-lg);
             padding: 32px;
-            border: 1px solid var(--grey-light);
+            border: 1px solid #d6e8f8;
             transition: all .3s var(--ease);
             position: relative;
         }
-        .cp-testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(27,95,186,.2); }
+        .cp-testi-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); border-color: rgba(27,95,186,.2); }
         .cp-testi-quote-mark {
             font-family: var(--font-display);
             font-size: 4rem;
             line-height: .8;
-            color: var(--blue);
+            color: #1b5fba;
             opacity: .15;
             margin-bottom: 12px;
         }
         .cp-testi-text {
             font-size: .9rem;
-            color: var(--text-mid);
+            color: #4a7fa8;
             line-height: 1.8;
             font-style: italic;
             margin-bottom: 24px;
@@ -588,24 +597,24 @@
             align-items: center;
             gap: 14px;
             padding-top: 20px;
-            border-top: 1px solid var(--grey-light);
+            border-top: 1px solid #d6e8f8;
         }
         .cp-testi-avatar {
             width: 48px; height: 48px;
             border-radius: 50%;
-            background: var(--grad-blue);
+            background: linear-gradient(135deg, #2272d9 0%, #7dc4f5 100%);
             display: flex; align-items: center; justify-content: center;
             font-size: .9rem;
             font-weight: 800;
             color: white;
             flex-shrink: 0;
         }
-        .cp-testi-name { font-size: .9rem; font-weight: 700; color: var(--text-dark); }
-        .cp-testi-company { font-size: .78rem; color: var(--text-light); margin-top: 2px; }
+        .cp-testi-name { font-size: .9rem; font-weight: 700; color: #0d2045; }
+        .cp-testi-company { font-size: .78rem; color: #4a7fa8; margin-top: 2px; }
 
         /* ── Contact CTA ── */
         #cp-contact {
-            background: var(--grad-hero);
+            background: linear-gradient(135deg, #e8f4ff 0%, #cce8ff 40%, #f0f9ff 100%);
             padding: 100px 0;
             position: relative;
             overflow: hidden;
@@ -614,8 +623,8 @@
             content: '';
             position: absolute; inset: 0;
             background-image:
-                linear-gradient(rgba(59,158,232,.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59,158,232,.05) 1px, transparent 1px);
+                linear-gradient(rgba(27,95,186,.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(27,95,186,.05) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
@@ -625,8 +634,8 @@
             filter: blur(80px);
             pointer-events: none;
         }
-        .cp-contact-shape-1 { width: 500px; height: 500px; background: var(--blue); opacity: .15; top: -150px; right: -100px; }
-        .cp-contact-shape-2 { width: 350px; height: 350px; background: var(--sky); opacity: .1; bottom: -100px; left: -50px; }
+        .cp-contact-shape-1 { width: 500px; height: 500px; background: #7dc4f5; opacity: .25; top: -150px; right: -100px; }
+        .cp-contact-shape-2 { width: 350px; height: 350px; background: #0ba4c4; opacity: .12; bottom: -100px; left: -50px; }
 
         .cp-contact-inner {
             position: relative;
@@ -640,15 +649,15 @@
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 900;
-            color: white;
+            color: #0d2045;
             line-height: 1.2;
             letter-spacing: -.03em;
             margin-bottom: 16px;
         }
-        .cp-contact-title span { color: var(--accent); }
+        .cp-contact-title span { color: #1b5fba; }
         .cp-contact-desc {
             font-size: 1rem;
-            color: rgba(255,255,255,.7);
+            color: #4a7fa8;
             line-height: 1.7;
             margin-bottom: 48px;
         }
@@ -660,27 +669,28 @@
             margin-bottom: 40px;
         }
         .cp-contact-card {
-            background: rgba(255,255,255,.07);
-            border: 1px solid rgba(255,255,255,.12);
+            background: #ffffff;
+            border: 1px solid #d6e8f8;
             border-radius: var(--radius-md);
             padding: 24px 20px;
             text-align: center;
             transition: all .3s var(--ease);
             text-decoration: none;
             display: block;
+            box-shadow: 0 2px 12px rgba(27,95,186,.08);
         }
-        .cp-contact-card:hover { background: rgba(255,255,255,.12); transform: translateY(-4px); }
+        .cp-contact-card:hover { background: #f0f7ff; transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,95,186,.13); border-color: rgba(27,95,186,.2); }
         .cp-contact-card-icon {
             width: 48px; height: 48px;
             border-radius: 50%;
-            background: rgba(255,255,255,.1);
+            background: rgba(27,95,186,.08);
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 14px;
-            color: var(--accent);
+            color: #1b5fba;
         }
         .cp-contact-card-label {
             font-size: .72rem;
-            color: rgba(255,255,255,.5);
+            color: #4a7fa8;
             text-transform: uppercase;
             letter-spacing: .08em;
             margin-bottom: 6px;
@@ -688,7 +698,7 @@
         .cp-contact-card-value {
             font-size: .9rem;
             font-weight: 600;
-            color: white;
+            color: #0d2045;
             line-height: 1.4;
         }
 
@@ -705,8 +715,8 @@
             bottom: 32px; left: 32px;
             width: 44px; height: 44px;
             border-radius: 50%;
-            background: var(--navy);
-            border: 1px solid rgba(255,255,255,.15);
+            background: #1b5fba;
+            border: 1px solid rgba(27,95,186,.3);
             color: white;
             display: flex; align-items: center; justify-content: center;
             cursor: pointer;
@@ -714,7 +724,7 @@
             pointer-events: none;
             transition: all .3s;
             z-index: 998;
-            box-shadow: 0 4px 16px rgba(0,0,0,.2);
+            box-shadow: 0 4px 16px rgba(27,95,186,.25);
         }
         #back-to-top.visible { opacity: 1; pointer-events: auto; }
 
@@ -736,7 +746,7 @@
             .cp-services-grid { grid-template-columns: 1fr; }
             .nilai-grid { grid-template-columns: 1fr; }
             .cp-hero-stats { flex-direction: column; gap: 24px; }
-            .cp-hero-stat { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 24px; }
+            .cp-hero-stat { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid rgba(27,95,186,.15); padding-bottom: 24px; }
             .cp-hero-stat:last-child { border-bottom: none; padding-bottom: 0; }
         }
     </style>
@@ -749,9 +759,6 @@
         <div class="nav-main">
             <div class="nav-main-content">
                 <a href="../index.html" class="nav-logo">
-                    <!-- <div class="nav-logo-icon">
-                        <img src="/logo/" alt="Izin Aja Dulu">
-                    </div> -->
                     <div class="nav-logo-text">
                         <span class="nav-logo-name">Izin<span>Aja</span>Dulu</span>
                         <span class="nav-logo-tagline">Legalitas & Virtual Office</span>
@@ -1011,9 +1018,9 @@
     <section id="cp-harga">
         <div class="container">
             <div class="section-header reveal" style="margin-bottom:64px">
-                <div class="section-tag" style="background:rgba(0,212,255,.1);border-color:rgba(0,212,255,.25);color:var(--accent)">Virtual Office Option</div>
-                <h2 class="section-title" style="color:white">Paket <span style="color:var(--accent)">Virtual Office</span></h2>
-                <p class="section-subtitle" style="color:rgba(255,255,255,.6)">Tiga pilihan paket Virtual Office yang dapat disesuaikan dengan kebutuhan dan skala bisnis Anda.</p>
+                <div class="section-tag" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:white">Virtual Office Option</div>
+                <h2 class="section-title" style="color:white">Paket <span style="color:#cce8ff">Virtual Office</span></h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,.75)">Tiga pilihan paket Virtual Office yang dapat disesuaikan dengan kebutuhan dan skala bisnis Anda.</p>
             </div>
 
             <div class="pricing-grid">
@@ -1060,25 +1067,25 @@
                     <div class="pricing-features">
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
                             </div>
                             Alamat surat-menyurat 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
                             </div>
                             FREE Ruang Meeting 12 jam/tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
                             </div>
                             Domain + Alamat Website 1 tahun
                         </div>
                         <div class="pricing-feature">
                             <div class="pricing-feature-check">
-                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#1b5fba" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
                             </div>
                             FREE Desain Website Perusahaan 1 bulan
                         </div>
@@ -1169,7 +1176,7 @@
                         <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
-                        <div class="cp-testi-avatar" style="background: var(--grad-navy);">MA</div>
+                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#1b5fba,#3b9ee8);">MA</div>
                         <div>
                             <div class="cp-testi-name">Muh. Aslim</div>
                             <div class="cp-testi-company">PT Digital Komunikasi Nusantara</div>
@@ -1184,7 +1191,7 @@
                         <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
-                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg, var(--sky), var(--accent));">IF</div>
+                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg, #3b9ee8, #0ba4c4);">IF</div>
                         <div>
                             <div class="cp-testi-name">Ina Fitriana Safira</div>
                             <div class="cp-testi-company">PT Almuna Multi Purpose</div>
@@ -1199,7 +1206,7 @@
                         <span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span><span class="cp-testi-star">★</span>
                     </div>
                     <div class="cp-testi-author">
-                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#1a3a6b,#2272d9);">JN</div>
+                        <div class="cp-testi-avatar" style="background: linear-gradient(135deg,#2272d9,#7dc4f5);">JN</div>
                         <div>
                             <div class="cp-testi-name">Jat Nurdin</div>
                             <div class="cp-testi-company">PT Sakabumi Jaya Abadi</div>
@@ -1218,7 +1225,7 @@
         <div class="cp-contact-shape-2"></div>
         <div class="container">
             <div class="cp-contact-inner reveal">
-                <div class="section-tag" style="margin:0 auto 24px;width:fit-content;background:rgba(0,212,255,.1);border-color:rgba(0,212,255,.3);color:var(--accent)">Hubungi Kami</div>
+                <div class="section-tag" style="margin:0 auto 24px;width:fit-content">Hubungi Kami</div>
                 <h2 class="cp-contact-title">
                     Siap Memulai<br><span>Kerja Sama?</span>
                 </h2>
@@ -1261,7 +1268,7 @@
                     </a>
                 </div>
 
-                <p style="margin-top:24px; font-size:.78rem; color:rgba(255,255,255,.35); text-align:center;">
+                <p style="margin-top:24px; font-size:.78rem; color:#7bafd4; text-align:center;">
                     Scientia Residence Tower C, Jl Scientia Square Utara, Curug Sangereng, Kelapa Dua, Kab. Tangerang 15810
                 </p>
             </div>
