@@ -629,6 +629,127 @@ function showToast (message, duration = 3500) {
 }
 
 /* ============================================================
+   MODAL KONSULTASI — WA Form
+   ============================================================ */
+function openKonsultasiModal (preselect) {
+  const modal = document.getElementById('modal-konsultasi')
+  if (!modal) return
+
+  // Preselect layanan jika ada
+  if (preselect) {
+    const select = document.getElementById('modal-layanan')
+    if (select) select.value = preselect
+  }
+
+  modal.classList.add('open')
+  document.body.style.overflow = 'hidden'
+
+  // Focus ke input pertama
+  setTimeout(() => {
+    const firstInput = modal.querySelector('#modal-nama')
+    if (firstInput) firstInput.focus()
+  }, 350)
+}
+
+function closeKonsultasiModal () {
+  const modal = document.getElementById('modal-konsultasi')
+  if (!modal) return
+  modal.classList.remove('open')
+  document.body.style.overflow = ''
+}
+
+function initKonsultasiModal () {
+  const modal = document.getElementById('modal-konsultasi')
+  if (!modal) return
+
+  // Close via backdrop
+  const backdrop = modal.querySelector('.modal-backdrop')
+  if (backdrop) backdrop.addEventListener('click', closeKonsultasiModal)
+
+  // Close via X button
+  const closeBtn = document.getElementById('modal-close-btn')
+  if (closeBtn) closeBtn.addEventListener('click', closeKonsultasiModal)
+
+  // Close via ESC
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeKonsultasiModal()
+    }
+  })
+
+  // Validasi & submit
+  const submitBtn = document.getElementById('modal-submit-btn')
+  if (!submitBtn) return
+
+  submitBtn.addEventListener('click', () => {
+    const nama = document.getElementById('modal-nama')
+    const wa = document.getElementById('modal-wa')
+    const layanan = document.getElementById('modal-layanan')
+    const pesan = document.getElementById('modal-pesan')
+
+    let valid = true
+
+    // Reset errors
+    document
+      .querySelectorAll('.form-error')
+      .forEach(e => e.classList.remove('show'))
+    document
+      .querySelectorAll('.form-input')
+      .forEach(e => e.classList.remove('error'))
+
+    // Validasi nama
+    if (!nama.value.trim()) {
+      document.getElementById('error-nama').classList.add('show')
+      nama.classList.add('error')
+      nama.focus()
+      valid = false
+    }
+
+    // Validasi WA
+    const waVal = wa.value.trim().replace(/\s|-/g, '')
+    if (!waVal || waVal.length < 9) {
+      document.getElementById('error-wa').classList.add('show')
+      wa.classList.add('error')
+      if (valid) wa.focus()
+      valid = false
+    }
+
+    // Validasi layanan
+    if (!layanan.value) {
+      document.getElementById('error-layanan').classList.add('show')
+      layanan.classList.add('error')
+      if (valid) layanan.focus()
+      valid = false
+    }
+
+    if (!valid) return
+
+    // Build pesan WA
+    const namaVal = nama.value.trim()
+    const layananVal = layanan.value
+    const pesanVal = pesan ? pesan.value.trim() : ''
+
+    let waNumber = waVal
+    if (waNumber.startsWith('0')) waNumber = '62' + waNumber.slice(1)
+    if (waNumber.startsWith('+')) waNumber = waNumber.slice(1)
+
+    let msg = `Halo Izin Aja Dulu! 👋\n\n`
+    msg += `Nama: *${namaVal}*\n`
+    msg += `Layanan: *${layananVal}*\n`
+    if (pesanVal) msg += `Kebutuhan: ${pesanVal}\n`
+    msg += `\nSaya ingin konsultasi gratis mengenai layanan di atas. Terima kasih!`
+
+    const waUrl = `https://wa.me/6283151165600?text=${encodeURIComponent(msg)}`
+
+    // Tutup modal dulu, baru buka WA
+    closeKonsultasiModal()
+    setTimeout(() => {
+      window.open(waUrl, '_blank', 'noopener,noreferrer')
+    }, 300)
+  })
+}
+
+/* ============================================================
    INIT ALL
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -645,4 +766,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initServiceCards()
   initBackToTop()
   initDocumentLinks()
+  initKonsultasiModal()
 })
+
+// Expose ke global scope untuk onclick handlers
+window.openKonsultasiModal = openKonsultasiModal
+window.closeKonsultasiModal = closeKonsultasiModal
