@@ -258,14 +258,14 @@ button {
 }
 
 .nav-logo-icon {
-  height: 120px;
+  height: 170px;
   display: flex;
   align-items: center;
 }
 .nav-logo-icon img {
   height: 100%;
   width: auto;
-  max-width: 300px;
+  max-width: 305px;
   object-fit: contain;
   display: block;
   border-radius: 0;
@@ -1174,12 +1174,12 @@ section {
   background: var(--white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  padding: 20px 24px;
+  padding: 10px 25px;
   border: 1px solid var(--grey-light);
   display: flex;
   align-items: center;
   gap: 16px;
-  min-width: 220px;
+  min-width: 200px;
 }
 .about-accent-icon {
   width: 52px;
@@ -2326,7 +2326,7 @@ section {
     display: none;
   }
   .nav-logo-icon {
-    height: 110px;
+    height: 120px;
   }
   .nav-logo-icon img {
     max-width: 280px;
@@ -2387,7 +2387,7 @@ section {
     max-width: calc(100% - 56px);
   }
   .nav-logo-icon {
-    height: 110px;
+    height: 129px;
   }
   .nav-logo-icon img {
     height: 100%;
@@ -2477,7 +2477,7 @@ section {
     overflow: visible;
   }
   .nav-logo-icon {
-    height: 100px;
+    height: 152px;
   }
   .nav-logo-icon img {
     max-width: 230px;
@@ -2504,7 +2504,7 @@ section {
     overflow: visible;
   }
   .nav-logo-icon {
-    height: 85px;
+    height: 110px;
   }
   .nav-logo-icon img {
     max-width: 190px;
